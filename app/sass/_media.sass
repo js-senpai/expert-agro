@@ -1,0 +1,538 @@
+@import "vars"
+/*==========  Desktop First  ==========*/
+@media screen and (max-width: 1450px)
+  //Service slider
+  .reviews-slider
+    .slider-btn-left
+      left: -3%
+    .slider-btn-right
+      right: -3%
+@media screen and (max-width: 1280px)
+  //Main page
+  #header
+    .header-call
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      text-align: center
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1190px)
+  //Main page
+  .banner-social
+    display: none
+@media only screen and (max-width: 1045px)
+  //Header
+  .toggle-menu
+    margin-right: 2%
+  //Main banner
+  .main-banner .flex-container
+    flex-wrap: wrap
+  .banner-form
+    display: none
+  .main-banner-item:first-of-type
+    margin-right: 0
+    max-width: 100%
+  .lead-banner
+    flex-wrap: wrap
+  .lead-banner-info-doctor
+    margin-left: 0
+    width: 100%
+    margin-top: 35px
+  .popup-open
+    display: block
+    width: 280px
+    margin: 0 auto
+  //Stock
+  .stocks-list
+    grid-template-columns: 1fr
+  .main-stocks
+    margin-right: 0
+    margin-bottom: 22px
+  #footer>.grid-container
+    grid-template-columns: 1fr 1fr
+    justify-content: center
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 995px)
+  #header
+    .header-contacts
+      display: none
+    .logo-title
+      display: none
+  //Service header
+  .service-header-item:last-of-type
+    display: none
+  .service-header .grid-container
+    grid-template-columns: 1fr
+  .service-header-item
+    overflow: hidden
+  //Service list
+  .service-list
+    grid-template-columns: 1fr
+  .service-list-item:first-of-type
+    margin-right: 0
+  .service-list-item
+    margin-bottom: 30px
+  //Form service
+  .form-service-inputs-container
+    grid-template-columns: 1fr
+  //Price list
+  .price-list,.price-items
+    .subtitle::after
+      display: none
+  //Doctors list
+  .doctors-list
+    grid-template-columns: repeat(2,1fr)
+  //Maps container
+  .contact,.maps-container
+    grid-template-columns: 1fr
+  .maps-container
+    padding: 0
+  .map-item:not(.map)
+    padding: 25px 20px
+  .map-item.map
+    height: 100%
+    max-height: 300px
+  .contact-item
+    height: auto
+  .contact-item:nth-of-type(1)
+    margin-bottom: 20px
+  .second-social
+    grid-template-columns: 1fr
+  .contact-socials
+    order: -1
+  .contact-img
+    img
+      width: 100%
+      max-height: 135px
+      height: 100%
+      object-fit: cover
+  .contact-socials-list
+    justify-content: flex-start
+    .social-menu-item
+      margin-right: 20px
+  //News container
+  .news-list-container
+    grid-template-columns: 1fr
+  //Информация о клинике
+  .more-info-clinic
+    display: block
+  .more-info-clinic-item:not(:last-of-type)
+    margin-bottom: 30px
+  .more-info-clinic-item
+    max-width: 100%
+/* Small Devices, Tablets */
+@media only screen and (max-width : 880px)
+  //Contact items
+  .header-contacts-info
+    font-size: 16px
+    line-height: 18px
+    max-width: 75%
+  body section
+    padding-bottom: 30px !important
+  //Service header
+  .service-links
+    overflow-x: scroll
+    padding-bottom: 5px
+  .service-links::-webkit-scrollbar
+    height: 2px
+  .service-links-wrapper
+    justify-content: flex-start
+    transition: all 200ms ease-in-out
+    width: max-content
+  .service-header-item
+    position: relative
+  .service-links-item
+    margin-right: 50px
+  //Review
+  .review-container
+    grid-template-columns: 1fr
+    padding: 30px 25px
+    background: #FAFAFF
+    border-radius: 5px
+  .mobile-review-info
+    height: 75px
+  .first-review-item
+    margin-bottom: 30px
+    .youtube
+      min-height: 200px
+  .second-review-item
+    .review-gallery
+      grid-gap: 15px
+  .review-gallery-item
+    img
+      width: 100%
+  .review-name
+    font-size: 18px
+    margin-bottom: 0
+  .review-city
+    font-size: 12px
+    color: #565656
+    margin-top: 5px
+    margin-bottom: 10px
+  .slider-btn
+    font-size: 25px
+  .reviews-slider .slider-btn-left
+    left: -2.1%
+  .faq-list-item .collapsible-header
+    font-size: 16px
+  .mobile-review-info
+    display: block
+  .second-review-item
+    .review-name,.review-city
+      display: none
+  //Services
+  .services-item
+    box-shadow: 0 10px 20px rgba(135, 135, 210, 0.1)
+    border-radius: 30px
+    background: #FFFFFF
+  //About us
+  .about-us-container
+    grid-template-columns: 1fr
+    .youtube
+      height: 219px
+  .about-us-item:last-of-type
+    order: -1
+    margin-bottom: 30px
+  .about-us-item:first-of-type
+    margin-right: 0
+  //Service form
+  .service-form
+    background: #FAFAFF
+  .service-form-container
+    box-shadow: none
+    background: none
+    border-radius: 0
+  //Service gallery
+  .service-gallery-more,.service-gallery-list
+    display: none
+  .service-gallery-slider
+    display: block
+    .slider-btn
+      top: 45%
+    .slider-btn-right
+      right: 0
+    .slider-btn-left
+      left: 0
+    .service-gallery-button
+      width: 230px
+      height: 230px
+      transition: all 10ms ease-in-out
+      margin-right: 10px
+    .service-gallery-button:not(.slick-active)
+      visibility: hidden
+    .service-gallery-button.slick-active + .service-gallery-button
+      visibility: visible
+      margin-left: 10px
+      opacity: 0.4
+  .service-faq .subtitle, .service-gallery .subtitle, .service-reviews .subtitle
+    padding-left: 40px
+  //Price list
+  .price-list-item
+    grid-template-columns: 10fr 1fr
+  .price-list-info
+    display: none
+  .mobile-more-info
+    display: block
+    font-weight: bold
+  .price-items-item
+    grid-column-gap: 0
+    grid-template-columns: 1fr
+  .price-items-img
+    text-align: center
+  .mobile-price
+    display: block
+    color: #8888D3
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 15px
+  .price-items-price
+    display: none
+  .price-items-char-item
+    grid-template-columns: 1fr 1fr
+  .char-item-name
+    grid-column-start: 1
+    grid-column-end: 12
+    margin-bottom: 30px
+  .price-items .subtitle, .price-list .subtitle
+    font-size: 18px
+  .price-items-img
+    margin-bottom: 30px
+  .price-items-title,.price-items-item:last-of-type
+    margin-bottom: 0
+  .price-items-item:last-of-type
+    padding-bottom: 0
+  //Review
+  .reviews
+    .review-container
+      margin-bottom: 30px
+      padding: 0
+      background: #FFF
+  //Hotels
+  .hotel,.hotel-titles
+    grid-template-columns: 1fr
+  //Информация о клинике
+  .about-clinic
+    grid-template-columns: 1fr
+    margin-bottom: 30px
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 794px)
+  //Main banner
+  .title,h3
+    font-size: 18px
+  h2
+    font-size: 24px
+  //Page title
+  .page-title
+    flex-wrap: wrap
+    margin-bottom: 10px
+    .title
+      font-size: 24px
+      margin-right: 0
+  //Lead banner
+  .lead-banner-form
+    grid-template-columns: 1fr
+    justify-content: center
+  //Services
+  .services-container
+    grid-template-columns: 1fr 1fr
+  //Advantages
+  .advantages-list,.advantages-list-item,.advantages-lab-container
+    text-align: center
+    grid-template-columns: 1fr
+  .advantages-list-item
+    margin-right: 0 !important
+  //Advantages lab
+  .advantages-lab-item
+    margin-bottom: 20px
+  //Light form
+  .light-form-lead-container
+    grid-template-columns: 1fr
+    text-align: center
+    .custom-form
+      flex-wrap: wrap
+      justify-content: center
+    .custom-form-input.telephone
+      margin-bottom: 20px
+      margin-right: 0
+  //How works
+  .how-works-list
+    grid-template-columns: 1fr
+  .how-works-item:not(:last-of-type),.advantages-lab-item:not(:last-of-type)
+    margin-right: 0
+  //Doctors slider
+  .doctors-slider-item
+    padding: 0 30px
+  //FAQ
+  .faq-list-item .collapsible-header
+    display: grid
+    grid-template-columns: 1fr 11fr
+  .faq-list-item .fa-chevron-down
+    display: flex
+    justify-content: center
+    align-items: center
+  //Service form
+  .service-form-container
+    padding: 30px 0
+    .subtitle
+      margin-top: 0
+  //Service header
+  .service-img
+    width: 60px
+    height: 60px
+    padding: 10px
+  //Form service
+  .form-service-inputs-container,.custom-form-submit
+    margin-bottom: 30px
+  .form-service-submit-container
+    flex-wrap: wrap
+    .custom-form-submit
+      margin-right: 0
+      margin-bottom: 30px
+  //Clinic
+  .clinic-gallery
+    grid-template-columns: 1fr
+  .blog-title
+    font-size: 24px
+    line-height: 24px
+  .mini-clinic-gallery img
+    max-height: 190px
+  // online form
+  .online-form
+    .subtitle
+      margin-bottom: 30px
+      &::after
+        display: none
+    .form-date-inputs-container,.form-date-submit-container
+      flex-wrap: wrap
+    .form-date-inputs,.custom-form-submit
+      margin-right: 0
+      width: 100%
+@media  only screen and (max-width: 680px)
+  .container
+    padding-left: 10px
+    padding-right: 10px
+  //Bottom lead
+  .bottom-lead-form-inputs
+    grid-template-columns: 1fr
+  .lead-banner-form-container
+    padding-bottom: 100px
+    width: 100%
+  .lead-banner-info-doctor
+    margin-top: -70px
+  //Services
+  .mini-stock,.mini-stock .stock-item
+    height: 125px
+  .services-title
+    font-size: 12px
+    line-height: 16px
+  .services-item
+    height: 125px
+    padding-top: 10px
+  .services-title
+    padding: 0 10px 15px 10px
+    margin-top: 9px
+  .services-img
+    height: 55px
+    img
+      height: 100%
+  //Stock
+  .main-stocks
+    height: 226px
+    overflow: hidden
+    strong
+      font-size: 24px
+      margin-bottom: 0
+    h4
+      font-size: 18px
+    .stock-item:last-of-type
+      order: -1
+  .mini-stock
+    strong
+      font-size: 18px
+      line-height: 17px
+    h4
+      font-size: 14px
+      line-height: 14px
+  //Footer
+  #footer>.grid-container
+    display: flex
+    align-items: center
+    flex-direction: column
+  #footer>.container
+    padding-left: 0
+    padding-right: 0
+    width: 100%
+  #footer .header-call
+    max-width: 100%
+    margin-right: 0
+  .footer-item
+    padding-left: 20px
+    padding-right: 20px
+    width: 100%
+  .footer-item:nth-of-type(3)
+    width: 100%
+    order: 5
+  .footer-info
+    text-align: center
+  .footer-item:nth-of-type(2),.footer-item:nth-of-type(3)
+    display: flex
+    justify-content: center
+  .footer-item:nth-of-type(4)
+    display: none
+  .footer-social,#footer .logo-container
+    justify-content: center
+  .footer-item:last-of-type
+    order: 3
+  //Hotel
+  .hotel-contacts
+    flex-wrap: wrap
+    .header-contacts-item
+      margin-bottom: 30px
+  //News
+  .news-list-item
+    grid-template-columns: 1fr
+  .blog-time
+    display: none
+  .blog-date
+    margin-right: 0
+  .blog-title
+    margin-bottom: 20px
+/* Extra Small Devices, Phones */
+@media (max-width: 483px)
+  .lead-banner-info-doctor
+    padding: 10px 25px
+  .info-doctor-text
+    font-size: 12px
+  //service-list-info-item
+  .service-list-info-item
+    flex-wrap: wrap
+    &>div
+      width: 100%
+    .service-list-info-price
+      order: 2
+    .service-list-info-dots
+      margin: 15px 0 10px 0
+      height: 4px
+      flex: none
+      display: block
+      order: 3
+  .service-list-info-item:last-of-type
+    .service-list-info-dots
+      display: none
+  //Doctors list
+  .doctors-list
+    grid-template-columns: 1fr
+  //Map social
+  .first-social,.map-contact
+    grid-template-columns: 1fr
+  .maps-title,.map-title
+    font-size: 18px
+  .map-item.map
+    height: 152px
+  //About
+  .about-doctors-list
+    position: relative
+    .slider-btn
+      top: 45%
+    .slider-btn-left
+      left: 0
+    .slider-btn-right
+      right: 0
+    .doctors-list-item
+      padding: 0
+      img
+        width: 100%
+        max-width: 250px
+        margin: 0 auto
+    .doctors-list-item:hover
+      box-shadow: none
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 375px)
+  .mini-clinic-gallery
+    img
+      max-height: 109px
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  /**/
