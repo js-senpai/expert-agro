@@ -11,19 +11,19 @@
 <body>
 <!-- Header -->
 <header id="header">
-	<div class="container">
+	<div class="container grid-container header-container">
 		<div class="logo">
-			<img data-src="img/icons/logo.svg" class="lazy" alt="logo">
+			<a href="#"><img data-src="img/icons/logo.svg" class="lazy" alt="logo"></a>
 		</div>
-		<div class="flex-container product-menu-container">
-			<button class="toggle-menu">
+		<div class="grid-container product-menu-container">
+			<div class="flex-container toggle-menu">
 				<span class="toggle-dec"></span>
 				<span class="toggle-dec"></span>
 				<span class="toggle-dec"></span>
-			</button>
+			</div>
 			<span class="toggle-title">Продукты и услуги</span>
 		</div>
-		<ul class="nav-menu">
+		<ul class="flex-container nav-menu">
 			<li class="nav-menu-item"><a href="#">О компании</a></li>
 			<li class="nav-menu-item"><a href="#">Наши клиенты</a></li>
 			<li class="nav-menu-item"><a href="#">Блог</a></li>
@@ -39,104 +39,106 @@
 		</div>
 	</div>
 	<!-- Product menu -->
-	<div class="grid-container product-menu-wrapper">
-		<div class="product-menu-item">
-			<div class="h4-title product-menu-title"><a href="#">Собственная продукция</a></div>
-			<ul class="product-menu-list">
-				<li class="product-menu-list-item sub-item">
-					<a href="#">Силосы</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">Плоскодонные</a></li>
-						<li class="submenu-item"><a href="#">Конусные</a></li>
-					</ul>
-				</li>
-				<li class="product-menu-list-item">
-					<a href="#">Зерноочистительные машины</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">NEOGRAIN</a></li>
-						<li class="submenu-item"><a href="#">GRAINSTORM</a></li>
-						<li class="submenu-item"><a href="#">YOUGRAIN</a></li>
-					</ul>
-				</li>
-				<li class="product-menu-list-item">
-					<a href="#">Транспортные системы</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">Скребковые</a></li>
-						<li class="submenu-item"><a href="#">Завальные ямы механизированные</a></li>
-						<li class="submenu-item"><a href="#">Шнековые транспортер</a></li>
-					</ul>
-				</li>
-				<li class="product-menu-list-item">
-					<a href="#">Транспортные системы</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">Скребковые</a></li>
-						<li class="submenu-item"><a href="#">Завальные ямы механизированные</a></li>
-						<li class="submenu-item"><a href="#">Шнековые транспортер</a></li>
-						<li class="submenu-item"><a href="#">Самотечное оборудование</a></li>
-					</ul>
-				</li>
-				<li class="product-menu-list-item">
-					<a href="#">Системы аспирации</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">Циклон ЦОЛ</a></li>
-						<li class="submenu-item"><a href="#">Блок батерейных циклонов</a></li>
-						<li class="submenu-item"><a href="#">Шлюзовые затворы</a></li>
-					</ul>
-				</li>
-				<li class="product-menu-list-item">
-					<a href="#">Металлоконструкции</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">Пункт отгрузки зерна на жд транспорт</a></li>
-						<li class="submenu-item"><a href="#">Бункер БНП</a></li>
-						<li class="submenu-item"><a href="#">Блок бункеров ББНП</a></li>
-					</ul>
-				</li>
-				<li class="product-menu-list-item">
-					<a href="#">Мобильный комплекс для очистки зерна</a>
-				</li>
-			</ul>
-		</div>
-		<div class="product-menu-item">
-			<div class="h4-title product-menu-title"><a href="#">Проектирование</a></div>
-			<ul class="product-menu-list">
-				<li class="product-menu-list-item"><a href="#">Проектирование</a></li>
-				<li class="product-menu-list-item"><a href="#">Подготовка рабочей документации</a></li>
-				<li class="product-menu-list-item"><a href="#">Прохождение гос экспертизы</a></li>
-				<li class="product-menu-list-item">
-					<a href="#">Объекты</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">Элеваторы</a></li>
-						<li class="submenu-item"><a href="#">Силосные емкости</a></li>
-						<li class="submenu-item"><a href="#">Зерноочистительные машины</a></li>
-						<li class="submenu-item"><a href="#">Транспортные системы</a></li>
-						<li class="submenu-item"><a href="#">Системы аспирации</a></li>
-						<li class="submenu-item"><a href="#">Металлоконструкции</a></li>
-						<li class="submenu-item"><a href="#">Мобильный комплекс для очистки зерна</a></li>
-						<li class="submenu-item"><a href="#">Семенные заводы</a></li>
-						<li class="submenu-item"><a href="#">Комбикормовые заводы</a></li>
-					</ul>
-				</li>
-			</ul>
-		</div>
-		<div class="product-menu-item">
-			<div class="h4-title product-menu-title"><a href="#">Строительство комплексов</a></div>
-			<ul class="product-menu-list">
-				<li class="product-menu-list-item"><a href="#">Элеваторы</a></li>
-				<li class="product-menu-list-item"><a href="#">Семенные заводы</a></li>
-				<li class="product-menu-list-item"><a href="#">Комбикормовые заводы</a></li>
-				<li class="product-menu-list-item"><a href="#">ЗАВ КЗС</a></li>
-			</ul>
-			<div class="h4-title product-menu-title"><a href="#">Продукция иностранных производителей</a></div>
-			<ul class="product-menu-list">
-				<li class="product-menu-list-item">
-					<a href="#">Бюлер</a>
-					<ul class="submenu">
-						<li class="submenu-item"><a href="#">Зерноочистка</a></li>
-						<li class="submenu-item"><a href="#">Зерносушилка</a></li>
-					</ul>
-				</li>
-				<li class="product-menu-list-item"><a href="#">Зерносушилка Польская</a></li>
-			</ul>
+	<div class="container grid-container product-menu-wrapper">
+		<div class="grid-container">
+			<div class="product-menu-item">
+				<div class="h3-title product-menu-title"><a href="#">Собственная продукция</a></div>
+				<ul class="product-menu-list">
+					<li class="product-menu-list-item sub-item">
+						<a href="#">Силосы</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Плоскодонные</a></li>
+							<li class="submenu-item"><a href="#">Конусные</a></li>
+						</ul>
+					</li>
+					<li class="product-menu-list-item">
+						<a href="#">Зерноочистительные машины</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">NEOGRAIN</a></li>
+							<li class="submenu-item"><a href="#">GRAINSTORM</a></li>
+							<li class="submenu-item"><a href="#">YOUGRAIN</a></li>
+						</ul>
+					</li>
+					<li class="product-menu-list-item">
+						<a href="#">Транспортные системы</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Скребковые</a></li>
+							<li class="submenu-item"><a href="#">Завальные ямы механизированные</a></li>
+							<li class="submenu-item"><a href="#">Шнековые транспортер</a></li>
+						</ul>
+					</li>
+					<li class="product-menu-list-item">
+						<a href="#">Транспортные системы</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Скребковые</a></li>
+							<li class="submenu-item"><a href="#">Завальные ямы механизированные</a></li>
+							<li class="submenu-item"><a href="#">Шнековые транспортер</a></li>
+							<li class="submenu-item"><a href="#">Самотечное оборудование</a></li>
+						</ul>
+					</li>
+					<li class="product-menu-list-item">
+						<a href="#">Системы аспирации</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Циклон ЦОЛ</a></li>
+							<li class="submenu-item"><a href="#">Блок батерейных циклонов</a></li>
+							<li class="submenu-item"><a href="#">Шлюзовые затворы</a></li>
+						</ul>
+					</li>
+					<li class="product-menu-list-item">
+						<a href="#">Металлоконструкции</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Пункт отгрузки зерна на жд транспорт</a></li>
+							<li class="submenu-item"><a href="#">Бункер БНП</a></li>
+							<li class="submenu-item"><a href="#">Блок бункеров ББНП</a></li>
+						</ul>
+					</li>
+					<li class="product-menu-list-item">
+						<a href="#">Мобильный комплекс для очистки зерна</a>
+					</li>
+				</ul>
+			</div>
+			<div class="product-menu-item">
+				<div class="h3-title product-menu-title"><a href="#">Проектирование</a></div>
+				<ul class="product-menu-list">
+					<li class="product-menu-list-item"><a href="#">Проектирование</a></li>
+					<li class="product-menu-list-item"><a href="#">Подготовка рабочей документации</a></li>
+					<li class="product-menu-list-item"><a href="#">Прохождение гос экспертизы</a></li>
+					<li class="product-menu-list-item">
+						<a href="#">Объекты</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Элеваторы</a></li>
+							<li class="submenu-item"><a href="#">Силосные емкости</a></li>
+							<li class="submenu-item"><a href="#">Зерноочистительные машины</a></li>
+							<li class="submenu-item"><a href="#">Транспортные системы</a></li>
+							<li class="submenu-item"><a href="#">Системы аспирации</a></li>
+							<li class="submenu-item"><a href="#">Металлоконструкции</a></li>
+							<li class="submenu-item"><a href="#">Мобильный комплекс для очистки зерна</a></li>
+							<li class="submenu-item"><a href="#">Семенные заводы</a></li>
+							<li class="submenu-item"><a href="#">Комбикормовые заводы</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="product-menu-item">
+				<div class="h3-title product-menu-title"><a href="#">Строительство комплексов</a></div>
+				<ul class="product-menu-list">
+					<li class="product-menu-list-item"><a href="#">Элеваторы</a></li>
+					<li class="product-menu-list-item"><a href="#">Семенные заводы</a></li>
+					<li class="product-menu-list-item"><a href="#">Комбикормовые заводы</a></li>
+					<li class="product-menu-list-item"><a href="#">ЗАВ КЗС</a></li>
+				</ul>
+				<div class="h4-title product-menu-title"><a href="#">Продукция иностранных производителей</a></div>
+				<ul class="product-menu-list">
+					<li class="product-menu-list-item">
+						<a href="#">Бюлер</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a href="#">Зерноочистка</a></li>
+							<li class="submenu-item"><a href="#">Зерносушилка</a></li>
+						</ul>
+					</li>
+					<li class="product-menu-list-item"><a href="#">Зерносушилка Польская</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </header>
@@ -144,112 +146,173 @@
 <!-- Main -->
 <main id="main">
 	<!-- Banner -->
-	<section class="main-banner">
+	<section class="main-banner" style="background: linear-gradient(180deg, rgba(0, 84, 44, 0) 60.78%, #00542C 100%), linear-gradient(180deg, #00542C 0%, rgba(0, 84, 44, 0) 19.82%), linear-gradient(90deg, rgba(0, 84, 44, 0.2) 0%, rgba(0, 84, 44, 0) 42.56%), linear-gradient(0deg, rgba(0, 84, 44, 0.2), rgba(0, 84, 44, 0.2)), url('img/_src/main/main-banner/img.jpg') no-repeat center/cover">
 		<div class="container">
 			<h1 class="title">Строительство и проектирование элеваторов, производство оборудования</h1>
 		</div>
-		<ul class="flex-container fluid-container banner-advantages-container">
-			<li class="grid-container banner-advantages-item">
-				<span class="fas fa-star"></span>
-				<div class="banner-advantages-content">
-					<div class="h4-title banner-advantages-title">Комплексное решение задачи</div>
-					<p class="banner-advantages-text">проектирование, производство оборудования и металлоконструкций, строительство – все в одном лице.</p>
+		<div class="banner-advantages-container">
+			<div class="grid-container container-fluid">
+				<div class="grid-container banner-advantages-item">
+					<span class="fas fa-star"></span>
+					<div class="banner-advantages-content">
+						<div class="h4-title banner-advantages-title">Комплексное решение задачи</div>
+						<p class="banner-advantages-text">проектирование, производство оборудования и металлоконструкций, строительство – все в одном лице.</p>
+					</div>
 				</div>
-			</li>
-			<li class="flex-container banner-advantages-item">
-				<span class="fas fa-star"></span>
-				<div class="banner-advantages-content">
-					<div class="h4-title banner-advantages-title">Бесплатно!</div>
-					<p class="banner-advantages-text">Выезд к клиенту, подготовка сметы, 3D-визуализация объекта, технологическая схема и схема привязки объекта к местности.</p>
+				<div class="grid-container banner-advantages-item">
+					<span class="fas fa-star"></span>
+					<div class="banner-advantages-content">
+						<div class="h4-title banner-advantages-title">Бесплатно!</div>
+						<p class="banner-advantages-text">Выезд к клиенту, подготовка сметы, 3D-визуализация объекта, технологическая схема и схема привязки объекта к местности.</p>
+					</div>
 				</div>
-			</li>
-			<li class="flex-container banner-advantages-item"><span class="fas fa-star"></span>
-				<div class="banner-advantages-content">
-					<div class="h4-title banner-advantages-title">Комплексное решение задачи</div>
-					<p class="banner-advantages-text">проектирование, производство оборудования и металлоконструкций, строительство – все в одном лице.</p>
+				<div class="grid-container banner-advantages-item"><span class="fas fa-star"></span>
+					<div class="banner-advantages-content">
+						<div class="h4-title banner-advantages-title">Комплексное решение задачи</div>
+						<p class="banner-advantages-text">проектирование, производство оборудования и металлоконструкций, строительство – все в одном лице.</p>
+					</div>
 				</div>
-			</li>
-			<li class="flex-container banner-advantages-item">
-				<span class="fas fa-star"></span>
-				<div class="banner-advantages-content">
-					<div class="h4-title banner-advantages-title">Опыт более 15 лет на рынке</div>
-					<p class="banner-advantages-text">В том числе большой опыт прогнозирования и решения неочевидных до старта трудностей, которые могут повлиять на сроки и качество выполняемых работ.</p>
+				<div class="grid-container banner-advantages-item">
+					<span class="fas fa-star"></span>
+					<div class="banner-advantages-content">
+						<div class="h4-title banner-advantages-title">Опыт более 15 лет на рынке</div>
+						<p class="banner-advantages-text">В том числе большой опыт прогнозирования и решения неочевидных до старта трудностей, которые могут повлиять на сроки и качество выполняемых работ.</p>
+					</div>
 				</div>
-			</li>
-		</ul>
+			</div>
+		</div>
 	</section>
 	<!-- Banner -->
 	<!-- Catalog -->
 	<section class="container catalog">
 		<h2 class="subtitle">Каталог</h2>
 		<div class="h5-title info-title">Строительство элеваторов, зернокомплексов. Производство элеваторного оборудования.</div>
-		<ul class="catalog-slider">
-			<li class="catalog-item">
-			<a href="#">
-				<div class="catalog-slider-img">
-					<img data-src="img/_src/catalog/catalog-item-1.jpg" class="lazy" alt="catalog">
+		<ul class="block-slider catalog-slider">
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-1.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Силосы</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
 				</div>
-				<div class="grid-container catalog-slider-info">
-					<span class="catalog-slider-title">Силосы</span>
-					<span class="slider-info-arrow"></span>
-				</div>
-			</a>
 			</li>
-			<li class="catalog-item"><a href="#">
-				<div class="catalog-slider-img">
-					<img data-src="img/_src/catalog/catalog-item-2.jpg" class="lazy" alt="catalog">
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-2.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Транспортные системы</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
 				</div>
-				<div class="grid-container catalog-slider-info">
-					<span class="catalog-slider-title">Транспортные системы</span>
-					<span class="slider-info-arrow"></span>
+			</li>
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-3.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Металлоконструкции</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
 				</div>
-			</a></li>
-			<li class="catalog-item"><a href="#">
-				<div class="catalog-slider-img">
-					<img data-src="img/_src/catalog/catalog-item-3.jpg" class="lazy" alt="catalog">
+			</li>
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-4.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Мобильный комплекс для очистки зерна</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
 				</div>
-				<div class="grid-container catalog-slider-info">
-					<span class="catalog-slider-title">Металлоконструкции</span>
-					<span class="slider-info-arrow"></span>
+			</li>
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-1.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Силосы</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
 				</div>
-			</a></li>
-			<li class="catalog-item"><a href="#">
-				<div class="catalog-slider-img">
-					<img data-src="img/_src/catalog/catalog-item-4.jpg" class="lazy" alt="catalog">
+			</li>
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-2.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Транспортные системы</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
 				</div>
-				<div class="grid-container catalog-slider-info">
-					<span class="catalog-slider-title">Мобильный комплекс для очистки зерна</span>
-					<span class="slider-info-arrow"></span>
+			</li>
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-3.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Металлоконструкции</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
 				</div>
-			</a></li>
+			</li>
+			<li class="block-slider-item catalog-item">
+				<div class="block-slider-container catalog-item-container">
+					<div class="block-slider-img catalog-slider-img">
+						<a href="#"></a>
+						<img data-lazy="img/_src/catalog/catalog-item-4.jpg"  alt="catalog">
+					</div>
+					<div class="grid-container block-slider-content catalog-slider-info">
+						<span class="block-slider-title catalog-slider-title">Мобильный комплекс для очистки зерна</span>
+						<a href="#" class="block-slider-arrow slider-info-arrow"></a>
+					</div>
+				</div>
+			</li>
 		</ul>
 	</section>
 	<!-- Catalog -->
+	<!-- Project catalog -->
 	<section class="container project-catalog">
 		<h2 class="subtitle">Реализованные проекты</h2>
 		<div class="h5-title info-title">Строительство элеваторов, зернокомплексов. Производство элеваторного оборудования.</div>
 		<div class="project-tab">
 			<header class="grid-container project-tab-header">
-				<ul class="project-tab-list">
-					<li class="project-tab-list-item active"><span data-href="#project-1">Элеваторы</span></li>
-					<li class="project-tab-list-item"><span data-href="#project-2">Зернохранилища</span></li>
-					<li class="project-tab-list-item"><span data-href="#project-3">Силосы</span></li>
-					<li class="project-tab-list-item"><span data-href="#project-4">Зерносушилки</span></li>
-					<li class="project-tab-list-item"><span data-href="#project-5">Элеваторное оборудование</span></li>
-					<li class="project-tab-list-item"><span data-href="#project-6">Зернопроводы</span></li>
+				<ul class="flex-container project-tab-list">
+					<li class="project-tab-list-item">Элеваторы</li>
+					<li class="project-tab-list-item">Зернохранилища</li>
+					<li class="project-tab-list-item">Силосы</li>
+					<li class="project-tab-list-item">Зерносушилки</li>
+					<li class="project-tab-list-item">Элеваторное оборудование</li>
+					<li class="project-tab-list-item">Зернопроводы</li>
 				</ul>
 				<a href="#" class="link-more project-tab-link">Все проекты</a>
 			</header>
-			<div class="grid-container project-gallery" id="project-1">
+			<div class="grid-container project-gallery">
 				<div class="project-gallery-main">
-					<div class="youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/main-gallery-item.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
+					<div class="flex-container youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/main-gallery-item.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 				</div>
-				<div class="project-gallery-list">
+				<div class="grid-container project-gallery-list">
 					<a href="img/_src/project-gallery/2.png" class="review-gallery-item" data-fancybox="gallery">
 						<img data-src="img/_src/project-gallery/2.png" class="lazy" alt="catalog">
 					</a>
 					<a href="img/_src/project-gallery/3.png" class="review-gallery-item" data-fancybox="gallery">
-						<img data-src="img/_src/project-gallery/3.png.jpg" class="lazy" alt="catalog">
+						<img data-src="img/_src/project-gallery/3.png" class="lazy" alt="catalog">
 					</a>
 					<a href="img/_src/project-gallery/4.png" class="review-gallery-item" data-fancybox="gallery">
 						<img data-src="img/_src/project-gallery/4.png" class="lazy" alt="catalog">
@@ -274,16 +337,16 @@
 					</a>
 				</div>
 			</div>
-			<div class="grid-container project-gallery" id="project-2">
+			<div class="grid-container project-gallery">
 				<div class="project-gallery-main">
-					<div class="youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/main-gallery-item.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
+					<div class="flex-container youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/main-gallery-item.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 				</div>
-				<div class="project-gallery-list">
+				<div class="grid-container project-gallery-list">
 					<a href="img/_src/project-gallery/2.png" class="review-gallery-item" data-fancybox="gallery">
 						<img data-src="img/_src/project-gallery/2.png" class="lazy" alt="catalog">
 					</a>
 					<a href="img/_src/project-gallery/3.png" class="review-gallery-item" data-fancybox="gallery">
-						<img data-src="img/_src/project-gallery/3.png.jpg" class="lazy" alt="catalog">
+						<img data-src="img/_src/project-gallery/3.png" class="lazy" alt="catalog">
 					</a>
 					<a href="img/_src/project-gallery/4.png" class="review-gallery-item" data-fancybox="gallery">
 						<img data-src="img/_src/project-gallery/4.png" class="lazy" alt="catalog">
@@ -311,18 +374,25 @@
 		</div>
 	</section>
 	<!-- Lead form -->
-	<section class="container lead-form">
-		<header class="lead-form-header">
-			<div class="h2-title lead-form-title">Остались вопросы?</div>
-			<div class="h5-title info-title">Оставьте ваши данные и мы свяжемся с вами. Мы не занимаемся рассылкой рекламных сообщений, а так же не передаем контактные данные третьим лицам</div>
-		</header>
-		<footer class="lead-form-footer">
-			<div class="grid-container lead-form-container">
-				<div class="lead-form-input-container"><input type="text" name="name" class="lead-form-input" placeholder="Имя"></div>
-				<div class="lead-form-input-container"><input type="tel" name="telephone" class="lead-form-input phone"></div>
-				<div class="lead-form-input-container"><input type="submit" class="lead-form-submit" value="Получить предложение"></div>
-			</div>
-		</footer>
+	<section class="lead-form">
+		<div class="container">
+			<header class="grid-container lead-form-header">
+				<div class="lead-form-header-container">
+					<div class="h2-title lead-form-title">Остались вопросы?</div>
+					<div class="h5-title info-title lead-form-info">Оставьте ваши данные и мы свяжемся с вами. Мы не занимаемся рассылкой рекламных сообщений, а так же не передаем контактные данные третьим лицам</div>
+				</div>
+				<div class="lead-form-img">
+					<img data-src="img/_src/lead-form/lead-form-bg.png" class="lazy" alt="lead form">
+				</div>
+			</header>
+			<footer class="lead-form-footer">
+				<div class="grid-container lead-form-container">
+					<div class="lead-form-input-container"><input type="text" name="name" class="lead-form-input" placeholder="Имя"></div>
+					<div class="lead-form-input-container"><input type="tel" name="telephone" class="lead-form-input phone" placeholder="Телефон"></div>
+					<div class="lead-form-input-container"><input type="submit" class="lead-form-submit" value="Получить предложение"></div>
+				</div>
+			</footer>
+		</div>
 	</section>
 	<!-- Lead form -->
 	<!-- Main about -->
@@ -332,7 +402,7 @@
 				<header class="main-about-block-header">
 					<h2 class="subtitle">Строительство</h2>
 					<div class="main-about-block-content">
-						<p>Строительно-монтажное подразделение компании EVEREST имеет допуски СРО строителей в РФ, все необходимые лицензии в РБ и реализует сложные инжиниринговые проекты «под ключ», в том числе строительство элеваторов, семенных и комбикормовых заводов. Реализуемые объекты сочетают в себе передовые методы и инструментарии, перспективные технологии и современные строительные решения, реализованные на основе оборудования брендов EVEREST COMPANY.</p>
+						Строительно-монтажное подразделение компании EVEREST имеет допуски СРО строителей в РФ, все необходимые лицензии в РБ и реализует сложные инжиниринговые проекты «под ключ», в том числе строительство элеваторов, семенных и комбикормовых заводов. Реализуемые объекты сочетают в себе передовые методы и инструментарии, перспективные технологии и современные строительные решения, реализованные на основе оборудования брендов EVEREST COMPANY.
 					</div>
 				</header>
                 <footer class="grid-container main-about-footer">
@@ -343,7 +413,7 @@
 				<header class="main-about-block-header">
 					<h2 class="subtitle">Проектирование</h2>
 					<div class="main-about-block-content">
-						<p>Инженерно-техническое проектирование. Собственная проектная база с наличием всех необходимых лицензий на проектирование и строительство в России и РБ. Являясь членом СРО (саморегулируемой организации) строителей и проектировщиков,  выполняем проектные работы по подготовке проектно-сметной документации для строительства промышленных объектов в том числе сельскохозяйственного направления, как в полном объеме, так и по отдельным разделам с прохождением государственной экспертизы.</p>
+						Инженерно-техническое проектирование. Собственная проектная база с наличием всех необходимых лицензий на проектирование и строительство в России и РБ. Являясь членом СРО (саморегулируемой организации) строителей и проектировщиков,  выполняем проектные работы по подготовке проектно-сметной документации для строительства промышленных объектов в том числе сельскохозяйственного направления, как в полном объеме, так и по отдельным разделам с прохождением государственной экспертизы.
 					</div>
 				</header>
 				<footer class="grid-container main-about-footer">
@@ -353,7 +423,7 @@
 		</div>
 		<div class="main-about-item">
 			<h2 class="subtitle">Оборудование</h2>
-			<ul class="equipment-list">
+			<ul class="grid-container equipment-list">
 				<li class="grid-container link-block equipment-list-item">
 						<div class="link-block-img equipment-list-img">
 							<img data-src="img/_src/main/equipments/eq-item-1.jpg" class="lazy" alt="equipments">
@@ -445,66 +515,70 @@
 					</div>
 				</li>
 			</ul>
-			<a href="#" class="btn btn-link">Показать ещё</a>
+			<footer class="grid-container main-about-footer">
+				<a href="#" class="btn btn-link">О проектировании</a><a href="#" class="more"></a>
+			</footer>
 		</div>
 	</section>
 	<!-- Main About -->
 	<!-- How work -->
-	<section class="container how-work">
-		<h2 class="subtitle">Как мы работаем</h2>
-		<div class="h5-title info-title">Солидный опыт компании и высокие стандарты качества формировали эффективную схему взаимодействия на всех этапах проектов</div>
-		<div class="how-work-steps">
-			<div class="how-work-steps-item">
-				<div class="how-work-number">1</div>
-				<div class="how-work-content">
-					<div class="h4-title how-work-steps-title">Запрос</div>
-					<div class="how-work-steps-text">
-						<p>Можно сделать по телефону, при помощи электронной формы обратной связи на нашем сайте или отправив письмо на почтовый ящик.</p>
+	<section class="how-work">
+		<div class="container">
+			<h2 class="subtitle">Как мы работаем</h2>
+			<div class="h5-title info-title">Солидный опыт компании и высокие стандарты качества формировали эффективную схему взаимодействия на всех этапах проектов</div>
+			<div class="grid-container how-work-steps">
+				<div class="grid-container how-work-steps-item">
+					<div class="how-work-number">1</div>
+					<div class="how-work-content">
+						<div class="h4-title how-work-steps-title">Запрос</div>
+						<div class="how-work-steps-text">
+							<p>Можно сделать по телефону, при помощи электронной формы обратной связи на нашем сайте или отправив письмо на почтовый ящик.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="how-work-steps-item">
-				<div class="how-work-number">2</div>
-				<div class="how-work-content">
-					<div class="h4-title how-work-steps-title">Составление сметы</div>
-					<div class="how-work-steps-text">
-						<p>Включает в себя подготовку технологических решений на основе готовых наработок или пожеланий заказчика, а также документооборот.</p>
+				<div class="grid-container how-work-steps-item">
+					<div class="how-work-number">2</div>
+					<div class="how-work-content">
+						<div class="h4-title how-work-steps-title">Составление сметы</div>
+						<div class="how-work-steps-text">
+							<p>Включает в себя подготовку технологических решений на основе готовых наработок или пожеланий заказчика, а также документооборот.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="how-work-steps-item">
-				<div class="how-work-number">3</div>
-				<div class="how-work-content">
-					<div class="h4-title how-work-steps-title">Проектирование</div>
-					<div class="how-work-steps-text">
-						<p>Собственный проектный отдел компании с сертификатами СРО строителей и проектировщиков. Большой опыт и набор собственных масштабируемых решений.</p>
+				<div class="grid-container how-work-steps-item">
+					<div class="how-work-number">3</div>
+					<div class="how-work-content">
+						<div class="h4-title how-work-steps-title">Проектирование</div>
+						<div class="how-work-steps-text">
+							<p>Собственный проектный отдел компании с сертификатами СРО строителей и проектировщиков. Большой опыт и набор собственных масштабируемых решений.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="how-work-steps-item">
-				<div class="how-work-number">6</div>
-				<div class="how-work-content">
-					<div class="h4-title how-work-steps-title">Строительство</div>
-					<div class="how-work-steps-text">
-						<p>Комплекс строительномонтажных работ на основе оптимальных инженерноконструкторских решений и модульного подхода.</p>
+				<div class="grid-container how-work-steps-item">
+					<div class="how-work-number">6</div>
+					<div class="how-work-content">
+						<div class="h4-title how-work-steps-title">Строительство</div>
+						<div class="how-work-steps-text">
+							<p>Комплекс строительномонтажных работ на основе оптимальных инженерноконструкторских решений и модульного подхода.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="how-work-steps-item">
-				<div class="how-work-number">7</div>
-				<div class="how-work-content">
-					<div class="h4-title how-work-steps-title">Комплектация</div>
-					<div class="how-work-steps-text">
-						<p>Включает в себя комплект проектной и рабочей документации, крепеж и набор необходимых опций для монтажа и запуска объекта.</p>
+				<div class="grid-container how-work-steps-item">
+					<div class="how-work-number">7</div>
+					<div class="how-work-content">
+						<div class="h4-title how-work-steps-title">Комплектация</div>
+						<div class="how-work-steps-text">
+							<p>Включает в себя комплект проектной и рабочей документации, крепеж и набор необходимых опций для монтажа и запуска объекта.</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="how-work-steps-item">
-				<div class="how-work-number">4</div>
-				<div class="how-work-content">
-					<div class="h4-title how-work-steps-title">Производство</div>
-					<div class="how-work-steps-text">
-						<p>Современные производственные линии, с машинами плазменной резки и высокотехнологичным оборудованием: листогибочные и прокатные станки, штампы.</p>
+				<div class="grid-container how-work-steps-item">
+					<div class="how-work-number">4</div>
+					<div class="how-work-content">
+						<div class="h4-title how-work-steps-title">Производство</div>
+						<div class="how-work-steps-text">
+							<p>Современные производственные линии, с машинами плазменной резки и высокотехнологичным оборудованием: листогибочные и прокатные станки, штампы.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -604,7 +678,7 @@
 	<section class="container history-success">
 		<header class="grid-container history-success-header">
 			<h2 class="subtitle history-success-title"></h2>
-			<div class="h3-title info-title history-success-info"></div>
+			<div class="h5-title info-title history-success-info"></div>
 		</header>
 		<footer class="grid-container history-success-footer">
 			<div class="grid-container history-success-item">
@@ -796,7 +870,7 @@
 		<div class="container flex-container">
 			<div class="flex-container footer-item">
 				<div class="logo">
-					<img data-src="img/icons/logo.svg" class="lazy" alt="logo">
+					<a href="#"><img data-src="img/icons/logo.svg" class="lazy" alt="logo"></a>
 				</div>
 				<div class="copyright">
 					<p>© 2019 <br>

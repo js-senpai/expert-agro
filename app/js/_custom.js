@@ -16,9 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     };
     //Маска для телефона
-    $('.custom-form-input.telephone').mask('+7(000)000-00-00');
-    //Маска для времени
-    $('#form-date-time').mask('00:00');
+    $('.lead-form-input.phone').mask('+7(000)000-00-00');
     // Календарь
     if($('.youtube')){
         $('.youtube').each(function () {
@@ -53,9 +51,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].dataset.youtube + '/sddefault.jpg)';
             }
             // Размещаем над постером кнопку Play, чтобы создать эффект плеера
-            var play = document.createElement("div");
+            const play = document.createElement("div"),
+                  youtubeText = document.createElement('div'),
+                  youtubeSettings = document.createElement('div');
             play.setAttribute("class","play");
-            videos[i].appendChild(play);
+            youtubeText.setAttribute('class','youtube-text');
+            youtubeText.textContent = videos[i].getAttribute('data-youtube-text');
+            youtubeSettings.setAttribute('class','flex-container youtube-container');
+            youtubeSettings.appendChild(play);
+            youtubeSettings.appendChild(youtubeText);
+            videos[i].append(youtubeSettings);
             videos[i].onclick = function() {
                 // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
                 const iframe = document.createElement("iframe");
@@ -105,9 +110,16 @@ document.addEventListener("DOMContentLoaded", function() {
                             videos[i].style.backgroundImage = 'url(http://i.ytimg.com/vi/' + videos[i].dataset.youtube + '/sddefault.jpg)';
                         }
                         // Размещаем над постером кнопку Play, чтобы создать эффект плеера
-                        var play = document.createElement("div");
-                        play.setAttribute("class", "play");
-                        videos[i].appendChild(play);
+                        const play = document.createElement("div"),
+                            youtubeText = document.createElement('div'),
+                            youtubeSettings = document.createElement('div');
+                        play.setAttribute("class","play");
+                        youtubeText.setAttribute('class','youtube-text');
+                        youtubeText.textContent = videos[i].getAttribute('data-youtube-text');
+                        youtubeSettings.setAttribute('class','flex-container youtube-container');
+                        youtubeSettings.appendChild(play);
+                        youtubeSettings.appendChild(youtubeText);
+                        videos[i].append(youtubeSettings);
                         videos[i].onclick = function () {
                             // Создаем iFrame и сразу начинаем проигрывать видео, т.е. атрибут autoplay у видео в значении 1
                             const iframe = document.createElement("iframe");
@@ -125,5 +137,63 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             })();
         };
+    //Toggle menu
+    $('.product-menu-container').click(function () {
+       $(this).toggleClass('active');
+       $('.product-menu-wrapper').fadeToggle(500);
+    });
+    //Category slider
+    //Слайдер специалистов
+    $('.catalog-slider').slick({
+        lazyLoad: 'progressive',
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+        nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
+        responsive: [
+            {
+                breakpoint: 1190,
+                settings:{
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 880,
+                settings:{
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 794,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
+    //Project tabs
+    $('.project-tab-list-item:first-of-type').addClass('active');
+    $('.project-gallery:first-of-type').addClass('active');
+    const projGallery =  $('.project-gallery'),
+          projectTab = document.querySelectorAll('.project-tab-list-item');
+    let currentTab = 0;
+    projGallery.each(function () {
+        currentTab++;
+        $(this).attr('id','project-'+currentTab);
+    })
+    for(let i = 0;i<projectTab.length;i++){
+        projectTab[i].setAttribute('data-href','#project-'+[i+1]);
+    }
+    $('.project-tab-list-item').click(function () {
+       if(!$(this).hasClass('active')){
+           let currentTab = $(this).attr('data-href');
+           $(this).addClass('active').siblings().removeClass('active');
+           $(currentTab).addClass('active').siblings().removeClass('active');
+       }
+    });
 });
 
