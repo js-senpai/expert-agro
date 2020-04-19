@@ -76,7 +76,7 @@ body
 .title
   text-shadow: 0 5px 3px rgba(0, 44, 10, 0.3)
 .subtitle
-  margin-bottom: 5px
+  margin-bottom: 6px
 .info-title
   margin-top: 0
 h1
@@ -159,7 +159,7 @@ img
   background-size: cover
   background-position: center
   .play
-    background: center/30px no-repeat url('../img/icons/play-white.svg') #fff
+    background: center/30px no-repeat url('../img/icons/play-white.svg') #015114
     width: 98px
     height: 98px
     border-radius: 50%
@@ -484,6 +484,8 @@ section.lead-form
   grid-template-columns: 1fr auto
   padding: 30px
   align-items: center
+  box-shadow: 0px 10px 20px rgba(194, 219, 204, 0.3)
+  border-radius: 3px
 .main-about-block:not(:last-of-type)
   margin-bottom: 20px
 .main-about-block:first-of-type .main-about-footer
@@ -496,6 +498,7 @@ section.lead-form
   padding: 30px
   .main-about-footer
     padding: 35px 0 0 0
+    box-shadow: none
 .equipment-list
   margin-top: 25px
   grid-template-columns: repeat(2,1fr)
@@ -519,7 +522,7 @@ section.lead-form
   margin-top: 70px
   background: url('../img/_src/main/how-work/how-work-line.svg') no-repeat top left/100%
   grid-template-columns: repeat(3,1fr)
-  grid-column-gap: 1%
+  grid-column-gap: 6%
   grid-row-gap: 100px
   padding: 85px 20px 0 20px
 .how-work-steps-item
@@ -532,4 +535,55 @@ section.lead-form
   padding-top: 15px
 .how-work-steps-title
   margin-top: 0
+.how-work-content
+  max-width: 342px
+/* Advantages company */
+.advantages-company
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+  margin-bottom: 55px
+.advantages-subtitle
+  margin-bottom: 21px
+.advantages-company-item:first-of-type
+  iframe
+    width: 100%
+    height: 100%
+.advantages-company-item
+  .play
+    background: 35% center/50px no-repeat url(../img/icons/play-white.svg) #015114
+  .youtube-text
+    order: -1
+    max-width: 357px
+    margin-top: 75px
+    margin-left: 45%
+  .youtube-container
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    height: 100%
+.advantages-list
+  grid-template-columns: repeat(5,1fr)
+  background: #FFFFFF
+  box-shadow: 0 10px 40px rgba(199, 199, 199, 0.4)
+  border-radius: 3px
+.advantages-list-item
+  padding: 30px
+  box-shadow: 5px 0 10px rgba(0, 0, 0, 0.05)
+.advantages-img
+  text-align: center
+  position: relative
+  img
+    max-width: 80px
+.advantages-number
+  display: block
+  width: 30px
+  height: 30px
+  text-align: center
+  background: #FCBD6D
+  line-height: 33px
+  color: $white
+  border-radius: 50%
+  position: absolute
+  top: -15px
+  left: 20%
 @import 'media'
