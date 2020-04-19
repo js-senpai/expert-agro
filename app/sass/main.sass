@@ -14,7 +14,7 @@ input, textarea
 ::-webkit-scrollbar-track
   background: $white
 ::-webkit-scrollbar-thumb
-  background: #5f61a4
+  background: #00542C
 ::-webkit-scrollbar-thumb:hover
   background: #555
 *
@@ -81,8 +81,10 @@ body
   margin-top: 0
 h1
   @include font(bold,72px,72px)
+  color: $black
 h2,.h2-title
   @include font(bold,24px,28px)
+  color: $black
 h3,.h3-title
   @include font(bold,18px,18px)
 h4,.h4-title
@@ -301,6 +303,7 @@ section.main-banner
   color: $white
   .title
     margin-top: 406px
+    color: $white
 .banner-advantages-container
   &>.grid-container
     grid-template-columns: repeat(4,1fr)
@@ -484,10 +487,10 @@ section.lead-form
   grid-template-columns: 1fr auto
   padding: 30px
   align-items: center
-  box-shadow: 0px 10px 20px rgba(194, 219, 204, 0.3)
+  box-shadow: 0 10px 20px rgba(194, 219, 204, 0.3)
   border-radius: 3px
 .main-about-block:not(:last-of-type)
-  margin-bottom: 20px
+  margin-bottom: 15px
 .main-about-block:first-of-type .main-about-footer
   background: url('../img/_src/main/build-blocks/block-1.jpg') no-repeat  center 90%/110%
 .main-about-block:last-of-type .main-about-footer
@@ -538,10 +541,15 @@ section.lead-form
 .how-work-content
   max-width: 342px
 /* Advantages company */
+.advantages
+  z-index: 1
+  position: relative
 .advantages-company
   grid-template-columns: repeat(2,1fr)
   grid-gap: 30px
   margin-bottom: 55px
+  position: relative
+  z-index: 1
 .advantages-subtitle
   margin-bottom: 21px
 .advantages-company-item:first-of-type
@@ -569,9 +577,11 @@ section.lead-form
 .advantages-list-item
   padding: 30px
   box-shadow: 5px 0 10px rgba(0, 0, 0, 0.05)
-.advantages-img
   text-align: center
+  bacgkround-color: #fff
+.advantages-img
   position: relative
+  margin-bottom: 30px
   img
     max-width: 80px
 .advantages-number
@@ -586,4 +596,108 @@ section.lead-form
   position: absolute
   top: -15px
   left: 20%
+.advantages-title
+  font-size: 16px
+  line-height: 20px
+  text-align: center
+  color: #000000
+  font-weight: bold
+  margin-bottom: 30px
+.advantages-list-item:first-of-type
+  .advantages-title
+    margin-bottom: 10px
+//Partners
+.partners-list-item img,.partners-list
+  background: #F4F4F4
+.partners-list
+  padding: 98px 0 50px 0
+  margin-top: -100px
+  &>.grid-container
+    grid-template-columns: repeat(auto-fit,200px)
+    align-items: center
+/* History Success */
+.history-success-header
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 150px
+  margin-bottom: 60px
+.history-success-title
+  font-size: 48px
+  line-height: 60px
+  margin-top: 0
+.history-success-info
+  font-size: 24px
+  line-height: 36px
+.history-success-footer
+  grid-template-columns: repeat(2,1fr)
+.history-success-item
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+  border: 1px solid #E2E2E2
+  padding: 60px
+.history-success-item:first-of-type
+  border-right-color: transparent
+.history-success-img
+  max-width: 277px
+.history-success-content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+.bold-percent
+  color: $black
+  font-weight: bold
+  font-size: 60px
+  line-height: 60px
+  display: block
+  width: 100%
+  margin-bottom: 37px
+//Specialists
+.specialists
+  position: relative
+.specialists-img
+  box-shadow: 0 20px 40px rgba(200, 200, 200, 0.3)
+  border-radius: 3px
+.specialists-slider-item
+  margin: 0 15px
+  text-align: center
+.specialists-title
+  font-weight: bold
+  font-size: 16px
+  line-height: 20px
+  margin-top: 30px
+//Sertificates
+.sertificates
+  background: #F4F4F4
+.sertificates-gallery
+  margin-top: 30px
+  grid-template-columns: repeat(6,1fr)
+  grid-gap: 30px
+.sertificates-gallery img:first-of-type
+  grid-column-start: 1
+  grid-column-end: 3
+  grid-row-start: 1
+  grid-row-end: 3
+//Last news
+.last-news-list
+  margin-top: 60px
+  grid-template-columns: repeat(3,1fr)
+  grid-gap: 30px
+//Footer
+#footer
+  background: #00542C
+  padding: 50px 0
+.footer-item-first
+  flex-direction: column
+.copyright
+  color: #9DB8A0
+  font-size: 12px
+  line-height: 20px
+.footer-title
+  margin-top: 0
+  color: $white
+  margin-bottom: 30px
+.footer-menu-item
+  a
+    color: #9DB8A0
+    text-decoration: none
 @import 'media'

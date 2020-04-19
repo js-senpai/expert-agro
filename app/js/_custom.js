@@ -195,5 +195,37 @@ document.addEventListener("DOMContentLoaded", function() {
            $(currentTab).addClass('active').siblings().removeClass('active');
        }
     });
+    //Spacialist slider
+    $('.specialists-slider').slick({
+        lazyLoad: 'progressive',
+        infinite: true,
+        slidesToShow: 6,
+        slidesToScroll: 6,
+        prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+        nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
+        responsive: [
+            {
+                breakpoint: 1190,
+                settings:{
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 880,
+                settings:{
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                }
+            },
+            {
+                breakpoint: 794,
+                settings:{
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            },
+        ]
+    });
 });
 
