@@ -80,9 +80,26 @@
   .last-news-list
     grid-template-columns: repeat(2,1fr)
 @media only screen and (max-width: 1045px)
-  /**/
+  /*Popup Lead */
+  .lead-popup-img img
+    position: static
+  .lead-popup-footer
+    .lead-form-container
+      grid-template-columns: 1fr
+  //Page banner
+  .page-banner,.service-info-block
+    grid-template-columns: 1fr
+  //Video reviews
+  .video-reviews-list
+    display: block
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 995px)
+  /* Lead popup */
+  .lead-popup-img
+    display: none
+  .lead-popup-wrapper
+    .lead-form-footer
+      margin-top: 0
   /*How work*/
   .how-work-steps
     grid-template-columns: repeat(auto-fit,320px)
@@ -203,6 +220,14 @@
   .youtube .youtube-text
     font-size: 12px
     line-height: 16px
+  //Page banner
+  .toggle-lead
+    width: 100%
+    &::after
+      display: none
+  //Video reviews
+  .video-review-video,.video-reviews-list-item iframe
+    height: 165px
   //How work
   .how-work-steps
     display: block
@@ -285,6 +310,8 @@
 @media only screen and (max-width : 375px)
   .header-container
     grid-template-columns: repeat(3,1fr)
+  .lead-popup-wrapper
+    width: 100%
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */

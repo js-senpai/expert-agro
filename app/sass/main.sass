@@ -73,8 +73,6 @@ body
   margin: 1.52rem 0 .912rem 0
 .h5-title
   margin: 1.0933333333rem 0 .656rem 0
-.title
-  text-shadow: 0 5px 3px rgba(0, 44, 10, 0.3)
 .subtitle
   margin-bottom: 6px
 .info-title
@@ -105,6 +103,10 @@ img
   z-index: 2
 #main,#footer,#header
   width: 100%
+.grey-bg
+  background: #F9F9F9
+.white-bg
+  background: $white
 // containers
 .grid-container
   display: grid
@@ -124,6 +126,7 @@ img
 //Btn settings
 .btn
   display: block
+  cursor: pointer
   width: 293px
   height: 60px
   line-height: 60px
@@ -139,6 +142,13 @@ img
   text-decoration: none
   &:hover
     background: #FCBD6D
+    color: $white
+.btn-link-green
+  border: 2px solid #199525
+  border-radius: 3px
+  text-decoration: none
+  &:hover
+    background: #199525
     color: $white
 .more
   display: block
@@ -175,10 +185,12 @@ img
   width: 100%
 /* Header */
 #header
-  background-color: transparent
+  background: linear-gradient(180deg, #00542C 0%, rgba(0, 84, 44, 0) 100%), linear-gradient(90deg, #00542C 0%, rgba(0, 84, 44, 0) 42.56%), linear-gradient(0deg, rgba(0, 84, 44, 0.5), rgba(0, 84, 44, 0.5)), url('../img/_src/header/bg.png') no-repeat center/cover
   padding-top: 40px
   padding-bottom: 40px
   position: relative
+.mainHeader
+  background: transparent
 .header-container
   grid-template-columns: 1fr 1fr 2fr 1fr
   grid-gap: 5px
@@ -307,6 +319,7 @@ section.main-banner
   .title
     margin-top: 406px
     color: $white
+    text-shadow: 0 5px 3px rgba(0, 44, 10, 0.3)
 .banner-advantages-container
   &>.grid-container
     grid-template-columns: repeat(4,1fr)
@@ -420,11 +433,14 @@ section.catalog
   grid-template-columns: 2fr 1fr
   grid-column-gap: 30px
   display: none
+  border-radius: 3px
   iframe
     width: 100%
     height: 100%
+    border-radius: 3px
   .play
     background: url('../img/icons/play-green.svg') no-repeat center/30px #fff
+    order: -1
   .youtube-text
     color: $white
     margin-top: 42px
@@ -444,8 +460,9 @@ section.catalog
     border-radius: 3px
 /* Lead form */
 section.lead-form
-  background: #F4F4F4
   padding-top: 0
+  &>.container
+    padding-bottom: 50px
 .lead-form-title
   color: $black
   font-size: 36px
@@ -456,10 +473,14 @@ section.lead-form
   line-height: 24px
   color: #656565
 .lead-form-header
-  grid-template-columns: 2.8fr 1fr
+  grid-template-columns: 2fr 1fr
   grid-gap: 30px
+.lead-form-img
+  img
+    width: 100%
+    margin-top: -25px
 .lead-form-header-container
-  padding-top: 50px
+  padding-top: 57px
 .lead-form-container
   grid-template-columns: repeat(3,1fr)
   grid-gap: 30px
@@ -480,6 +501,10 @@ section.lead-form
   background: #015114
 .lead-form-submit:hover
   background: #3eb54b
+section.large-lead-form
+  padding-bottom: 130px
+  .lead-form-header-container
+    padding-top: 134px
 /* Main about */
 .main-about
   grid-template-columns: 1fr 1fr
@@ -558,11 +583,12 @@ section.lead-form
   z-index: 1
 .advantages-subtitle
   margin-bottom: 21px
-.advantages-company-item:first-of-type
+.advantages-company-item
+  border-radius: 3px
   iframe
     width: 100%
     height: 100%
-.advantages-company-item
+    border-radius: 3px
   .play
     background: 35% center/50px no-repeat url(../img/icons/play-white.svg) #015114
   .youtube-text
@@ -613,14 +639,18 @@ section.lead-form
   .advantages-title
     margin-bottom: 10px
 //Partners
-.partners-list-item img,.partners-list
+.partners-list-item img
   background: #F4F4F4
+.partners-main
+  margin-top: -100px
 .partners-list
   padding: 98px 0 50px 0
-  margin-top: -100px
   &>.grid-container
     grid-template-columns: repeat(auto-fit,200px)
     align-items: center
+.partners-title
+  margin-bottom: 60px
+  text-align: center
 /* History Success */
 .history-success-header
   grid-template-columns: repeat(2,1fr)
@@ -713,4 +743,104 @@ section.lead-form
     text-decoration: none
 .mobile-copyright
   display: none
+//Page banner
+.page-banner
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+  .title
+    margin-bottom: 65px
+  img
+    height: 100%
+    width: 100%
+.toggle-lead
+  position: relative
+  margin-top: 65px
+  &::after
+    content: ''
+    display: inline-block
+    width: 40px
+    height: 40px
+    background: url('../img/icons/arrow-dark-green.svg') no-repeat center/100%
+    position: absolute
+    right: -80px
+    top: 20%
+.page-banner-content
+  max-width: 440px
+  font-size: 16px
+.breadcrumbs
+  justify-content: flex-start
+  margin-bottom: 50px
+  a
+    text-decoration: none
+.breadcrumbs-item
+  margin-right: 10px
+  i
+    padding-left: 10px
+    font-size: 11px
+/* Service info block */
+.service-info-block-item:last-of-type
+  img
+    width: 100%
+    height: 100%
+.service-info-block
+  padding-top: 50px
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+/* Reviews title */
+.video-reviews-title
+  margin-bottom: 60px
+.video-reviews-list
+  grid-template-columns: repeat(3,1fr)
+  grid-gap: 30px
+.video-reviews-list-item
+  .youtube
+    border-radius: 3px
+  iframe
+    width: 100%
+    height: 320px
+    border-radius: 3px
+.video-review-video
+  height: 320px
+  .play
+    background-size: 50%
+    background-position-x: 40%
+.video-reviews-list-title
+  margin-top: 30px
+  margin-bottom: 10px
+/* Popups */
+.lead-popup-container
+  display: none
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  width: 100%
+  height: 100%
+  background-color: #020202a1
+  &>.flex-container
+    width: 100%
+    height: 100%
+    justify-content: center
+    align-content: center
+.lead-popup-header,.lead-popup-img
+  position: relative
+.lead-popup-footer,.lead-popup-header
+  padding: 5% 6%
+.lead-popup-wrapper
+  width: 90%
+  overflow: hidden
+.close-popup
+  position: absolute
+  top: 15%
+  right: 5%
+  font-size: 30px
+  cursor: pointer
+  color: $black
+.lead-popup-img
+  img
+    position: absolute
+    right: -37%
+    top: 24px
+    margin-top: 0
 @import 'media'
