@@ -3,29 +3,288 @@
 @media screen and (max-width: 1450px)
   /**/
 @media screen and (max-width: 1280px)
-  /**/
+  .main-about
+    grid-template-columns: 1fr
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
-  /**/
+  /*Header*/
+  .header-mobile
+    display: block
+    height: 36px
+    background: #FCBD6D
+    color: $white
+    font-weight: bold
+    font-size: 18px
+    text-align: center
+    text-decoration: none
+    line-height: 36px
+    margin-top: 23px
+  .nav-menu
+    display: none
+  .header-container
+    grid-template-columns: 50px 1fr 50px
+    .header-contact-tel
+      display: none
+    .header-contact
+      justify-content: flex-end
+  .product-menu-container
+    order: -1
+    grid-template-columns: 1fr
+    width: 50px
+  .toggle-title
+    display: none
+  .logo
+    justify-content: center
+  .product-menu-wrapper
+    top: 148px
+  /* How work */
+  .how-work-steps
+    background: none
+  /* Advantages */
+  .advantages-company
+    grid-template-columns: 1fr
+  .advantages-company-item:first-of-type
+    height: 500px
+  .advantages-list
+    grid-template-columns: 1fr
+  .advantages-number
+    left: calc(100%/2.5)
+  .partners-list
+    &>.grid-container
+      grid-template-columns: 1fr
+      grid-gap: 30px
+  .partners-list-item
+    text-align: center
+  //Project gallery
+  .project-tab-header
+    overflow-x: scroll
+  .project-tab-list
+    flex-wrap: nowrap
+  .project-tab-list-item
+    min-width: 200px
+  .project-gallery
+    grid-template-columns: 1fr
+    grid-gap: 30px
+  .project-gallery-main
+    height: 500px
+  .project-gallery-list
+    grid-template-columns: repeat(2,1fr)
+    img
+      width: 100%
+  .project-gallery-list a,.project-gallery-list img
+    max-height: inherit
+    max-width: inherit
+  .project-tab-list-item:not(:last-of-type)
+    margin-right: 30px
+  //last news
+  .last-news-list
+    grid-template-columns: repeat(2,1fr)
 @media only screen and (max-width: 1045px)
   /**/
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 995px)
-  /**/
+  /*How work*/
+  .how-work-steps
+    grid-template-columns: repeat(auto-fit,320px)
+  //Lead form
+  .lead-form-container,.lead-form-header
+    grid-template-columns: 1fr
+  .lead-form-img
+    text-align: center
+    img
+      object-fit: contain
+      display: block
+      width: 100%
+      height: 100%
+  .lead-form-footer
+    margin-top: -40%
+  //Footer
+  .footer-item
+    width: 50%
+    margin-bottom: 30px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
-  /**/
+  .container
+    padding: 0 20px
+  h2,.h2-title,.subtitle
+    font-size: 18px
+  h1,.title
+    font-size: 26px
+    line-height: 30px
+  .main-banner .title
+    margin: 60% 0 30px 0
+    text-align: center
+  .banner-advantages-container
+    margin-top: 0
+  .link-block-title
+    font-size: 14px
+  .main-about-block-header,.main-about-item:last-of-type
+    border: none
+    padding: 0
+    box-shadow: none
+  .how-work-steps
+    padding: 0
+  //Header
+  .product-menu-title
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .toggle-nav
+    font-size: 14px
+    cursor: pointer
+    display: block
+    width: 20px
+    height: 20px
+    text-align: center
+    line-height: 20px
+  .toggle-nav.active
+    transform: rotate(-180deg)
+  .product-menu-list
+    display: none
+  .product-menu-wrapper
+    &>.grid-container
+      display: block
+  //Main banner
+  .banner-advantages-container
+    &>.grid-container,.banner-advantages-item
+      grid-template-columns: 1fr
+  .banner-advantages-item:not(:first-of-type)
+    display: none
+  .banner-advantages-item
+    text-align: center
+  //Main about
+  .equipment-list
+    grid-template-columns: repeat(1,1fr)
+  //Catalog
+  .block-slider-container
+    max-width: 100%
+    img
+      width: 100%
+  .catalog-slider
+    .slider-btn
+      display: none !important
+  //History Success
+  .history-success-item:first-of-type
+    border-right-color: #e2e2e2
+  .history-success-header,.history-success-footer,.history-success-item
+    grid-template-columns: 1fr
+    grid-gap: 30px
+  .history-success-text
+    width: 100%
+  .history-success-item
+    text-align: center
+  .history-success-img
+    max-width: 100%
+    img
+      width: 100%
+  //Specialists
+  .specialists-img
+    img
+      width: 100%
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
-  /**/
+  //Sertificates
+  .sertificates-gallery
+    display: block
+  //Last news
+  .last-news-list
+    grid-template-columns: 1fr
 @media  only screen and (max-width: 680px)
-  /**/
+  body
+    font-size: 12px
+  .product-menu-container
+    width: 32px
+    height: 32px
+  .youtube .play
+    width: 60px
+    height: 60px
+  .project-gallery .play
+    background-size: 20px
+  .youtube .youtube-text
+    font-size: 12px
+    line-height: 16px
+  //How work
+  .how-work-steps
+    display: block
+  .how-work-steps-item
+    grid-template-columns: auto 1fr
+    grid-gap: 20px
+  //Project gallery
+  .project-gallery-main,.advantages-company-item:first-of-type
+    height: 187px
+  .project-gallery .youtube-text
+    margin-top: 10px
+  //Advantages
+  .advantages-company-item .play
+    background-size: 30px
+  .advantages-company-item .youtube-text
+    margin-top: 14px
+    margin-left: 50%
+    max-width: 160px
+  .advantages-number
+    width: 20px
+    height: 20px
+    font-size: 14px
+    line-height: 20px
+    left: -40%
+  .advantages-list-item
+    position: relative
+  .advantages-img
+    position: absolute
+    width: 40px
+    left: 30%
+    top: 55px
+    img
+      width: 100%
+  .advantages-title,.advantages-list-item:first-of-type .advantages-title
+    margin-top: 30px
+    margin-bottom: 25px
+    max-width: 186px
+    text-align: left
+    padding-left: 40%
+  //Footer
+  .footer-item
+    width: 100%
+    .header-contact
+      justify-content: center
+  .copyright
+    display: none
+  .mobile-copyright
+    display: block
+    .copyright
+      display: block
+  .footer-item-first
+    text-align: center
+  //Main about
+  .main-about-footer
+    grid-template-columns: 1fr
+    .btn-link
+      width: 100%
+    .more
+      display: none
+  .main-about
+    grid-template-columns: 100%
+  .link-block
+    grid-template-columns: 125px 1fr
+  .slider-btn
+    width: 18px
+    height: 12px
+  .slider-btn-right
+    right: -4%
+  .slider-btn-left
+    left: -4%
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
-  /**/
+  .advantages-img
+    left: 15%
+  .advantages-list-item:first-of-type .advantages-title, .advantages-title
+    padding-left: 30%
+  .advantages-company-item .youtube-text
+    margin-left: 40%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
-  /**/
+  .header-container
+    grid-template-columns: repeat(3,1fr)
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */

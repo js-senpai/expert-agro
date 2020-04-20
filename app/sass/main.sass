@@ -47,9 +47,9 @@ body
   a
     color: #199525
   a:hover
-    color: #2fd441
+    color: #3eb54b
   a:active
-    color: #2fd441
+    color: #3eb54b
   blockquote
     background: #FAFAFF
     border-radius: 10px
@@ -114,14 +114,10 @@ img
   flex-wrap: wrap
   justify-content: space-between
 .container-fluid
-  min-width: 320px
   padding: 0 5px
-  width: auto
   max-width: 1500px
   margin: 0 auto
 .container
-  min-width: 320px
-  width: auto
   max-width: 1380px
   padding: 0 30px
   margin: 0 auto
@@ -160,6 +156,8 @@ img
   align-items: center
   background-size: cover
   background-position: center
+  border-radius: 3px
+  overflow: hidden
   .play
     background: center/30px no-repeat url('../img/icons/play-white.svg') #015114
     width: 98px
@@ -185,7 +183,9 @@ img
   grid-template-columns: 1fr 1fr 2fr 1fr
   grid-gap: 5px
 .logo
-  max-width: 200px
+  align-items: center
+  img
+    max-width: 200px
 .product-menu-container
   border-radius: 3px
   width: 236px
@@ -239,6 +239,7 @@ img
     line-height: 35px
     text-align: center
     margin-right: 14px
+    text-decoration: none
 .header-contact-tel
   a
     display: block
@@ -247,6 +248,8 @@ img
     font-size: 18px
     line-height: 18px
     color: #FFFFFF
+.header-mobile
+  display: none
 .header-contact-text
   display: block
   font-size: 12px
@@ -299,7 +302,7 @@ section.main-banner
   padding-bottom: 0
   padding-top: 1px
 .main-banner
-  margin-top: -173px
+  margin-top: -190px
   color: $white
   .title
     margin-top: 406px
@@ -343,10 +346,10 @@ section.catalog
   top: 35%
   z-index: 1
 .slider-btn-right
-  right: -30px
+  right: -2%
 .slider-btn-left
   transform: rotate(-180deg)
-  left: -30px
+  left: -2%
 .block-slider-item
   margin: 0 15px
 .block-slider-container
@@ -395,9 +398,12 @@ section.catalog
   grid-template-columns: 1fr 40px
 /* Project catalog */
 .project-tab-header
-  grid-template-columns: 1fr auto
+  grid-template-columns: 1fr 113px
+  padding-bottom: 5px
   margin-bottom: 30px
   align-items: center
+.project-tab-header::-webkit-scrollbar
+  height: 3px
 .project-tab-list
   justify-content: flex-start
 .project-tab-list-item:not(:last-of-type)
@@ -473,7 +479,7 @@ section.lead-form
   font-weight: bold
   background: #015114
 .lead-form-submit:hover
-  background: #2fd441
+  background: #3eb54b
 /* Main about */
 .main-about
   grid-template-columns: 1fr 1fr
@@ -490,7 +496,7 @@ section.lead-form
   box-shadow: 0 10px 20px rgba(194, 219, 204, 0.3)
   border-radius: 3px
 .main-about-block:not(:last-of-type)
-  margin-bottom: 15px
+  margin-bottom: 55px
 .main-about-block:first-of-type .main-about-footer
   background: url('../img/_src/main/build-blocks/block-1.jpg') no-repeat  center 90%/110%
 .main-about-block:last-of-type .main-about-footer
@@ -563,7 +569,7 @@ section.lead-form
     order: -1
     max-width: 357px
     margin-top: 75px
-    margin-left: 45%
+    margin-left: 35%
   .youtube-container
     flex-direction: column
     justify-content: flex-start
@@ -655,11 +661,16 @@ section.lead-form
 .specialists
   position: relative
 .specialists-img
-  box-shadow: 0 20px 40px rgba(200, 200, 200, 0.3)
   border-radius: 3px
+  background-color: $white
+  overflow: hidden
+  transition: all 500ms ease-in-out
+  &:hover
+    box-shadow: 0 20px 40px rgba(200, 200, 200, 0.3)
 .specialists-slider-item
   margin: 0 15px
   text-align: center
+  cursor: pointer
 .specialists-title
   font-weight: bold
   font-size: 16px
@@ -700,4 +711,6 @@ section.lead-form
   a
     color: #9DB8A0
     text-decoration: none
+.mobile-copyright
+  display: none
 @import 'media'

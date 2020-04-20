@@ -142,18 +142,47 @@ document.addEventListener("DOMContentLoaded", function() {
        $(this).toggleClass('active');
        $('.product-menu-wrapper').fadeToggle(500);
     });
-    //Category slider
+    $('.submenu').parent().addClass('sub-item');
+    if($(window).width()<=881){
+        $('.product-menu-title').each(function () {
+            if($(this).find('.toggle-nav').length <1 || !$(this).find('.toggle-nav')) {
+                $(this).append('<span class="fas fa-chevron-down toggle-nav"></span>');
+            }
+        })
+    }else if($(window).width()>=881){
+        if($('.toggle-nav') !== undefined){
+            $('.toggle-nav').remove();
+        }
+    }
+    $(window).resize(function () {
+        if($(window).width()<=881){
+            $('.product-menu-title').each(function () {
+                if($(this).find('.toggle-nav').length <1 || !$(this).find('.toggle-nav')) {
+                    $(this).append('<span class="fas fa-chevron-down toggle-nav"></span>');
+                }
+            })
+        }else if($(window).width()>881){
+            if($('.toggle-nav') !== undefined){
+                $('.toggle-nav').remove();
+            }
+        }
+    });
+    $('.toggle-nav').click(function() {
+        $(this).toggleClass('active');
+        $(this).parent().next('.product-menu-list').fadeToggle(500);
+    });
     //Слайдер специалистов
     $('.catalog-slider').slick({
         lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
+        arrows: true,
         prevArrow: '<span class="slider-btn slider-btn-left"></span>',
         nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
         responsive: [
             {
-                breakpoint: 1190,
+                breakpoint: 1250,
                 settings:{
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -161,18 +190,13 @@ document.addEventListener("DOMContentLoaded", function() {
             },
             {
                 breakpoint: 880,
-                settings:{
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 794,
+                arrows: false,
                 settings:{
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }
             },
+
         ]
     });
     //Project tabs
@@ -184,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function() {
     projGallery.each(function () {
         currentTab++;
         $(this).attr('id','project-'+currentTab);
-    })
+    });
     for(let i = 0;i<projectTab.length;i++){
         projectTab[i].setAttribute('data-href','#project-'+[i+1]);
     }
@@ -205,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function() {
         nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
         responsive: [
             {
-                breakpoint: 1190,
+                breakpoint: 1250,
                 settings:{
                     slidesToShow: 3,
                     slidesToScroll: 3,
@@ -219,7 +243,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             },
             {
-                breakpoint: 794,
+                breakpoint: 600,
                 settings:{
                     slidesToShow: 1,
                     slidesToScroll: 1,
@@ -227,5 +251,28 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         ]
     });
+    //Слайдер cертификатов
+    if($(window).width()<=795){
+        $('.sertificates-gallery').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll:1,
+            arrows: false
+        })
+    }else{
+        $('.sertificates-gallery').filter('.slick-initialized').slick('unslick');
+    }
+    // $(window).resize(function () {
+    //     if($(window).width()<=795){
+    //         $('.sertificates-gallery').slick({
+    //             infinite: true,
+    //             slidesToShow: 1,
+    //             slidesToScroll:1,
+    //             arrows: false
+    //         })
+    //     }else if($(window).width() > 795){
+    //         $('.sertificates-gallery').filter('.slick-initialized').slick('unslick');
+    //     }
+    // });
 });
 

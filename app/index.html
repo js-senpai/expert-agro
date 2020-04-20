@@ -12,7 +12,7 @@
 <!-- Header -->
 <header id="header">
 	<div class="container grid-container header-container">
-		<div class="logo">
+		<div class="flex-container logo">
 			<a href="#"><img data-src="img/icons/logo.svg" class="lazy" alt="logo"></a>
 		</div>
 		<div class="grid-container product-menu-container">
@@ -31,20 +31,23 @@
 			<li class="nav-menu-item"><a href="#">Контакты</a></li>
 		</ul>
 		<div class="flex-container header-contact">
-			<div class="fas fa-phone-alt mobile-icon"></div>
+			<a href="tel:+74951090015" class="fas fa-phone-alt mobile-icon"></a>
 			<div class="header-contact-tel">
 				<a href="tel:+74951090015">+7 495 109-00-15</a>
 				<span class="header-contact-text">Заказать звонок</span>
 			</div>
 		</div>
 	</div>
+	<!-- Mobile telephone -->
+	<a href="tel:+74951090015" class="header-mobile">+7 495 109-00-15</a>
+	<!-- Mobile telephone -->
 	<!-- Product menu -->
-	<div class="container grid-container product-menu-wrapper">
-		<div class="grid-container">
+	<div class="product-menu-wrapper">
+		<div class="container grid-container">
 			<div class="product-menu-item">
 				<div class="h3-title product-menu-title"><a href="#">Собственная продукция</a></div>
 				<ul class="product-menu-list">
-					<li class="product-menu-list-item sub-item">
+					<li class="product-menu-list-item ">
 						<a href="#">Силосы</a>
 						<ul class="submenu">
 							<li class="submenu-item"><a href="#">Плоскодонные</a></li>
@@ -127,7 +130,7 @@
 					<li class="product-menu-list-item"><a href="#">Комбикормовые заводы</a></li>
 					<li class="product-menu-list-item"><a href="#">ЗАВ КЗС</a></li>
 				</ul>
-				<div class="h4-title product-menu-title"><a href="#">Продукция иностранных производителей</a></div>
+				<div class="h3-title product-menu-title"><a href="#">Продукция иностранных производителей</a></div>
 				<ul class="product-menu-list">
 					<li class="product-menu-list-item">
 						<a href="#">Бюлер</a>
@@ -305,7 +308,7 @@
 			</header>
 			<div class="grid-container project-gallery">
 				<div class="project-gallery-main">
-					<div class="flex-container youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/main-gallery-item.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
+					<div class="flex-container youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/video-bg.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 				</div>
 				<div class="grid-container project-gallery-list">
 					<a href="img/_src/project-gallery/2.png" class="review-gallery-item" data-fancybox="gallery">
@@ -339,7 +342,7 @@
 			</div>
 			<div class="grid-container project-gallery">
 				<div class="project-gallery-main">
-					<div class="flex-container youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/main-gallery-item.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
+					<div class="flex-container youtube project-video" data-youtube-text="Кировская область, ЗАО премзавод «Октябрьский" data-youtube-img="img/_src/project-gallery/video-bg.jpg" data-youtube="https://www.youtube.com/watch?v=5kAPExqSZ1I"></div>
 				</div>
 				<div class="grid-container project-gallery-list">
 					<a href="img/_src/project-gallery/2.png" class="review-gallery-item" data-fancybox="gallery">
@@ -953,60 +956,66 @@
 		</ul>
 	</section>
 	<!-- News -->
-	<!-- Footer -->
-	<footer id="footer">
-		<div class="container flex-container">
-			<div class="flex-container footer-item footer-item-first">
-				<div class="logo">
-					<a href="#"><img data-src="img/icons/logo.svg" class="lazy" alt="logo"></a>
-				</div>
-				<div class="copyright">
-					© 2019 <br>
-						Официальный сайт компании <br>«Эксперт-агро»
-				</div>
+</main>
+<!-- Main -->
+<!-- Footer -->
+<footer id="footer">
+	<div class="container flex-container">
+		<div class="flex-container footer-item footer-item-first">
+			<div class="logo">
+				<a href="#"><img data-src="img/icons/logo.svg" class="lazy" alt="logo"></a>
 			</div>
-			<div class="footer-item">
-				<div class="h3-title footer-title">Информация</div>
-				<ul class="footer-menu">
-					<li class="footer-menu-item"><a href="#">О компании</a></li>
-					<li class="footer-menu-item"><a href="#">Наши клиенты</a></li>
-					<li class="footer-menu-item"><a href="#">Блог</a></li>
-					<li class="footer-menu-item"><a href="#">Новости</a></li>
-					<li class="footer-menu-item"><a href="#">Контакты</a></li>
-				</ul>			
+			<div class="copyright">
+				© 2019 <br>
+				Официальный сайт компании <br>«Эксперт-агро»
 			</div>
-			<div class="footer-item">
-				<div class="h3-title footer-title">Служебные страницы</div>
-				<ul class="footer-menu">
-					<li class="footer-menu-item"><a href="#">Вакансии</a></li>
-					<li class="footer-menu-item"><a href="#">Партнеры</a></li>
-					<li class="footer-menu-item"><a href="#">Отзывы</a></li>
-					<li class="footer-menu-item"><a href="#">Сертификаты и награды</a></li>
-				</ul>
+		</div>
+		<div class="footer-item">
+			<div class="h3-title footer-title">Информация</div>
+			<ul class="footer-menu">
+				<li class="footer-menu-item"><a href="#">О компании</a></li>
+				<li class="footer-menu-item"><a href="#">Наши клиенты</a></li>
+				<li class="footer-menu-item"><a href="#">Блог</a></li>
+				<li class="footer-menu-item"><a href="#">Новости</a></li>
+				<li class="footer-menu-item"><a href="#">Контакты</a></li>
+			</ul>
+		</div>
+		<div class="footer-item">
+			<div class="h3-title footer-title">Служебные страницы</div>
+			<ul class="footer-menu">
+				<li class="footer-menu-item"><a href="#">Вакансии</a></li>
+				<li class="footer-menu-item"><a href="#">Партнеры</a></li>
+				<li class="footer-menu-item"><a href="#">Отзывы</a></li>
+				<li class="footer-menu-item"><a href="#">Сертификаты и награды</a></li>
+			</ul>
+		</div>
+		<div class="footer-item">
+			<div class="h3-title footer-title">Покупателям</div>
+			<ul class="footer-menu">
+				<li class="footer-menu-item"><a href="#">Сервис, ремонт</a></li>
+				<li class="footer-menu-item"><a href="#">Дилеры</a></li>
+				<li class="footer-menu-item"><a href="#">Вопрос & Ответ</a></li>
+				<li class="footer-menu-item"><a href="#">Условия гарантии и оплаты</a></li>
+			</ul>
+		</div>
+		<div class="footer-item mobile-copyright">
+			<div class="copyright">
+				© 2019 <br>
+				Официальный сайт компании <br>«Эксперт-агро»
 			</div>
-			<div class="footer-item">
-				<div class="h3-title footer-title">Покупателям</div>
-				<ul class="footer-menu">
-					<li class="footer-menu-item"><a href="#">Сервис, ремонт</a></li>
-					<li class="footer-menu-item"><a href="#">Дилеры</a></li>
-					<li class="footer-menu-item"><a href="#">Вопрос & Ответ</a></li>
-					<li class="footer-menu-item"><a href="#">Условия гарантии и оплаты</a></li>
-				</ul>
-			</div>
-			<div class="footer-item">
-				<div class="flex-container header-contact">
-					<div class="fas fa-phone-alt mobile-icon"></div>
-					<div class="header-contact-tel">
-						<a href="tel:+74951090015">+7 495 109-00-15</a>
-						<span class="header-contact-text">Заказать звонок</span>
-					</div>
+		</div>
+		<div class="footer-item">
+			<div class="flex-container header-contact">
+				<div class="fas fa-phone-alt mobile-icon"></div>
+				<div class="header-contact-tel">
+					<a href="tel:+74951090015">+7 495 109-00-15</a>
+					<span class="header-contact-text">Заказать звонок</span>
 				</div>
 			</div>
 		</div>
-	</footer>
-	<!-- Footer -->
-</main>
-<!-- Main -->
+	</div>
+</footer>
+<!-- Footer -->
 <script src="js/scripts.min.js"></script>
 </body>
 </html>
