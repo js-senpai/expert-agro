@@ -744,14 +744,23 @@ section.large-lead-form
 .mobile-copyright
   display: none
 //Page banner
+.service-banner-img
+  position: relative
+  img
+    position: absolute
+    right: calc(100%/-9)
+    height: 100%
+    width: max-content
+    max-width: 1020px
+    object-fit: cover
+.page-banner-bg
+  background: url('../img/_src/services-page/main-banner/main-bg.png') no-repeat top right/50% 100%
 .page-banner
-  grid-template-columns: repeat(2,1fr)
-  grid-gap: 30px
+  &>.grid-container
+    grid-template-columns: repeat(2,1fr)
+    grid-gap: 30px
   .title
     margin-bottom: 65px
-  img
-    height: 100%
-    width: 100%
 .toggle-lead
   position: relative
   margin-top: 65px
