@@ -237,13 +237,13 @@ img
   justify-content: center
   align-content: center
 .nav-menu-item
-  margin-right: 2%
+  margin-right: 4%
   a
     color: #fff
     text-decoration: none
 .header-contact
   align-items: center
-  justify-content: flex-start
+  justify-content: flex-end
   .mobile-icon
     width: 35px
     height: 35px
@@ -291,15 +291,16 @@ img
     color: $black
     text-decoration: none
     font-weight: bold
-.product-menu-list-item
+.product-menu-list-item,.product-links-item
   margin-bottom: 5px
+  color: $black
   &>a
     color: $black
     text-decoration: none
     padding-bottom: 10px
-.submenu
+.submenu,.submenu-links
   padding: 5px 0
-.submenu-item
+.submenu-item,.submenu-links-item
   position: relative
   a
     color: #C8C8C8
@@ -395,6 +396,7 @@ section.catalog
     background: #dedbdba6
   img
     height: 100%
+    width: 100%
 .block-slider-content
   padding: 0 30px
   height: 80px
@@ -750,15 +752,9 @@ section.large-lead-form
   display: none
 //Page banner
 .service-banner-img
-  position: relative
   img
-    position: absolute
+    max-width: 1024px
     top: 20%
-    right: calc(100%/-9)
-    height: 100%
-    width: max-content
-    max-width: 1020px
-    object-fit: cover
 .page-banner-bg
   background: url('../img/_src/services-page/main-banner/main-bg.png') no-repeat top right/50% 100%
 .page-banner
@@ -783,6 +779,17 @@ section.large-lead-form
 .page-banner-content
   max-width: 440px
   font-size: 16px
+.page-banner-item
+  position: relative
+  img
+    position: absolute
+    right: calc(100%/-9)
+    height: 100%
+    width: max-content
+    max-width: 785px
+    object-fit: cover
+  img
+    height: 100%
 .breadcrumbs
   justify-content: flex-start
   margin-bottom: 50px
@@ -887,4 +894,19 @@ section.large-lead-form
     right: -37%
     top: 24px
     margin-top: 0
+//Product links
+.products-links
+  padding-top: 20px
+  padding-bottom: 20px
+  grid-template-columns: repeat(auto-fill,220px)
+  grid-gap: 10px
+//Own catalog
+.own-catalog-item
+  margin: 0
+.own-catalog-list
+  grid-template-columns: repeat(auto-fit,320px)
+  grid-gap: 30px
+.own-catalog-img
+  a
+    background: none
 @import 'media'
