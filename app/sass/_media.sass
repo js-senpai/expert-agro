@@ -1,10 +1,17 @@
 @import "vars"
 /*==========  Desktop First  ==========*/
-@media screen and (max-width: 1450px)
-  /**/
+@media screen and (max-width: 1320px)
+  .service-banner-img
+    img
+      max-width: 100%
+      position: static
+      object-fit: cover
+      object-position: right
 @media screen and (max-width: 1280px)
-  .main-about
+  .main-about,.page-banner-bg>.grid-container
     grid-template-columns: 1fr
+  .page-banner-bg
+    background: none
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1190px)
   /*Header*/
@@ -87,7 +94,7 @@
     .lead-form-container
       grid-template-columns: 1fr
   //Page banner
-  .page-banner>.grid-container,.service-info-block
+  .page-banner>.grid-container,.service-info-block>.grid-container
     grid-template-columns: 1fr
   //Video reviews
   .video-reviews-list
@@ -106,6 +113,8 @@
   //Lead form
   .lead-form-container,.lead-form-header
     grid-template-columns: 1fr
+  .lead-form-header
+    text-align: center
   .lead-form-img
     text-align: center
     img
@@ -119,8 +128,22 @@
   .footer-item
     width: 50%
     margin-bottom: 30px
+  //Info block
+  .page-banner-content
+    max-width: 100%
+  .service-info-block-item p
+    font-size: 12px
+  .service-info-block.service-info-block-price
+    padding-left: 0
+    padding-right: 0
+    .service-info-block-item:first-of-type,.service-info-block-title
+      padding: 0 20px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
+  .mobile-block
+    display: block !important
+  .desktop-block
+    display: none
   .container
     padding: 0 20px
   h2,.h2-title,.subtitle
@@ -206,6 +229,12 @@
   //Last news
   .last-news-list
     grid-template-columns: 1fr
+  //Info block
+  .service-info-price-title
+    font-size: 24px
+    line-height: 24px
+  .service-info-title
+    font-size: 12px
 @media  only screen and (max-width: 680px)
   body
     font-size: 12px
@@ -221,9 +250,10 @@
     font-size: 12px
     line-height: 16px
   //Page banner
-  .toggle-lead
-    width: 100%
-    &::after
+  .page-banner
+    .toggle-lead
+      width: 100%
+    .toggle-lead::after
       display: none
   //Video reviews
   .video-review-video,.video-reviews-list-item iframe
@@ -294,10 +324,11 @@
   .slider-btn
     width: 18px
     height: 12px
+    top: 30%
   .slider-btn-right
-    right: -4%
+    right: -5%
   .slider-btn-left
-    left: -4%
+    left: -5%
 /* Extra Small Devices, Phones */
 @media (max-width: 483px)
   .advantages-img

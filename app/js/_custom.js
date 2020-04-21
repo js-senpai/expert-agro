@@ -316,7 +316,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows: false
+                arrows: true,
+                prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+                nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
             })
         } else {
             $('.video-reviews-list').filter('.slick-initialized').slick('unslick');
@@ -327,7 +329,9 @@ document.addEventListener("DOMContentLoaded", function() {
                     infinite: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    arrows: false
+                    arrows: true,
+                    prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+                    nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
                 })
             } else if ($(window).width() > 1043) {
                 $('.video-reviews-list').filter('.slick-initialized').slick('unslick');

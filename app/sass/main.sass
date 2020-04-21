@@ -107,6 +107,8 @@ img
   background: #F9F9F9
 .white-bg
   background: $white
+.mobile-block
+  display: none !important
 // containers
 .grid-container
   display: grid
@@ -430,7 +432,7 @@ section.catalog
   border: 2px solid #8DD094
   border-radius: 3px
 .project-gallery
-  grid-template-columns: 2fr 1fr
+  grid-template-columns: repeat(2,1fr)
   grid-column-gap: 30px
   display: none
   border-radius: 3px
@@ -453,8 +455,10 @@ section.catalog
   a
     display: block
     max-height: 110px
+    width: inherit
   img
-    max-width: 175px
+    display: block
+    width: 100%
     height: 100%
     max-height: 110px
     border-radius: 3px
@@ -499,6 +503,7 @@ section.lead-form
   color: $white
   font-weight: bold
   background: #015114
+  text-align: center
 .lead-form-submit:hover
   background: #3eb54b
 section.large-lead-form
@@ -748,6 +753,7 @@ section.large-lead-form
   position: relative
   img
     position: absolute
+    top: 20%
     right: calc(100%/-9)
     height: 100%
     width: max-content
@@ -761,18 +767,19 @@ section.large-lead-form
     grid-gap: 30px
   .title
     margin-bottom: 65px
+  .toggle-lead
+    &::after
+      content: ''
+      display: inline-block
+      width: 40px
+      height: 40px
+      background: url('../img/icons/arrow-dark-green.svg') no-repeat center/100%
+      position: absolute
+      right: -80px
+      top: 20%
 .toggle-lead
   position: relative
   margin-top: 65px
-  &::after
-    content: ''
-    display: inline-block
-    width: 40px
-    height: 40px
-    background: url('../img/icons/arrow-dark-green.svg') no-repeat center/100%
-    position: absolute
-    right: -80px
-    top: 20%
 .page-banner-content
   max-width: 440px
   font-size: 16px
@@ -787,14 +794,42 @@ section.large-lead-form
     padding-left: 10px
     font-size: 11px
 /* Service info block */
-.service-info-block-item:last-of-type
+.service-info-block-title
+  margin: 30px 0
+.service-info-block-item
+  p
+    font-size: 18px
+    line-height: 30px
   img
     width: 100%
     height: 100%
 .service-info-block
   padding-top: 50px
-  grid-template-columns: repeat(2,1fr)
-  grid-gap: 30px
+  padding-bottom: 50px
+  &>.grid-container
+    grid-template-columns: repeat(2,1fr)
+    grid-gap: 30px
+.service-info-block-price
+  &>.grid-container
+    grid-template-columns: 2fr 1fr
+    grid-gap: 30px
+.service-info-price
+  background: #E9E9E9
+  padding: 30px
+  .bold-percent
+    font-size: 40px
+    margin-bottom: 20px
+.service-info-block-btn
+  margin-top: 0
+  width: -webkit-fill-available
+.service-info-price-title
+  font-size: 36px
+  line-height: 40px
+  margin-bottom: 20px
+.service-info-title
+  font-size: 18px
+  line-height: 24px
+  margin-bottom: 20px
 /* Reviews title */
 .video-reviews-title
   margin-bottom: 60px
