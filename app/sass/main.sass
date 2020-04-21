@@ -421,16 +421,16 @@ section.catalog
   align-items: center
 .project-tab-header::-webkit-scrollbar
   height: 3px
-.project-tab-list
+.project-tab-list,.current-product-nav
   justify-content: flex-start
-.project-tab-list-item:not(:last-of-type)
+.project-tab-list-item:not(:last-of-type),.current-product-nav-item:not(:last-of-type)
   margin-right: 3%
-.project-tab-list-item
+.project-tab-list-item,.current-product-nav-item
   padding: 5px 10px
   text-align: center
   cursor: pointer
   border: 2px solid transparent
-.project-tab-list-item.active,.project-tab-list-item:hover
+.project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active
   border: 2px solid #8DD094
   border-radius: 3px
 .project-gallery
@@ -909,4 +909,10 @@ section.large-lead-form
 .own-catalog-img
   a
     background: none
+/* Current products */
+.current-product-header
+  padding: 12px 30px
+.current-product-main
+  margin-top: 74px
+  grid-template-columns: 1fr 2fr 1fr
 @import 'media'

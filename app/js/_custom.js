@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 1500);
         });
     };
+    scrollTo('.current-product-nav-item','data-href');
     if($('.isMain')){
         $('#header').addClass('mainHeader');
     }
