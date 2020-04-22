@@ -96,11 +96,25 @@
   //Page banner
   .page-banner>.grid-container,.service-info-block>.grid-container
     grid-template-columns: 1fr
+  div.service-info-block
+    padding-top: 20px
   //Video reviews
   .video-reviews-list
     display: block
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 995px)
+  section[class]
+    padding-top: 20px
+    padding-bottom: 20px
+    font-size: 12px
+  .history-success-info
+    line-height: inherit
+  .large-lead-form .lead-form-header-container
+    padding-top: 20px !important
+  .lead-form
+    background: #f9f9f9
+  .lead-form-header-container
+    padding-top: 0
   /* Lead popup */
   .lead-popup-img
     display: none
@@ -131,6 +145,9 @@
   //Info block
   .page-banner-content
     max-width: 100%
+    font-size: 12px
+  .page-banner .title
+    margin-bottom: 20px
   .service-info-block-item p
     font-size: 12px
   .service-info-block.service-info-block-price
@@ -138,6 +155,44 @@
     padding-right: 0
     .service-info-block-item:first-of-type,.service-info-block-title
       padding: 0 20px
+  //Page
+  .breadcrumbs
+    margin-bottom: 20px
+  section.page-banner
+    padding-top: 20px
+    padding-bottom: 20px
+  .btn
+    font-size: 12px
+  .sertificates
+    text-align: center
+  .info-title
+    font-size: 12px
+  //Current Product
+  section.tech-char
+    padding-left: 0
+    padding-right: 0
+  .current-product-main
+    grid-template-columns: 1fr
+  .current-product-header:not(.eqip-header)
+    background: $white
+  .current-product-nav
+    flex-wrap: wrap
+  .current-product-nav-item,.current-product-char-list-item
+    width: 100%
+    font-size: 12px
+  .current-product-char-list-item:before
+    font-size: 12px
+  .current-product-img img
+    width: 100%
+  .current-description-content p
+    font-size: 12px
+  .table-char-v1,.table-char-v2,.table-char-v3
+    display: none
+  .mobile-table-v1,.mobile-table-v2,.mobile-table-v3
+    display: block
+  .tech-char-first-title,.tech-char-title
+    margin-bottom: 17px
+    padding: 0 20px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   .mobile-block
@@ -157,7 +212,7 @@
   .banner-advantages-container
     margin-top: 0
   .link-block-title
-    font-size: 14px
+    font-size: 12px
   .main-about-block-header,.main-about-item:last-of-type
     border: none
     padding: 0
@@ -205,7 +260,7 @@
       display: none !important
   //History Success
   .history-success-info
-    font-size: 14px
+    font-size: 12px
   .bold-percent
     font-size: 36px
     margin-bottom: 0
@@ -218,7 +273,7 @@
     border-right-color: #e2e2e2
   .history-success-header,.history-success-footer,.history-success-item
     grid-template-columns: 1fr
-    grid-gap: 30px
+    grid-gap: 0px
   .history-success-text
     width: 100%
   .history-success-item

@@ -355,5 +355,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if($('.table-char-v3-body .table-char-v3-td:first-child')){
         tableCounter('.table-char-v3-body .table-char-v3-td:first-child');
     }
+    if($('.mobile-table-v1-wrapper')){
+        tableCounter('.mobile-table-v1-wrapper .mobile-table-v1-item:first-child');
+    }
+    if($('.mobile-table-v3-wrapper')){
+        tableCounter('.mobile-table-v3-wrapper .mobile-table-v3-item:first-child');
+    }
 });
 
