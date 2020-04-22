@@ -15,7 +15,10 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 1500);
         });
     };
-    scrollTo('.current-product-nav-item','data-href');
+    //Scroll Tab
+    if($('.current-product-nav-item')){
+        scrollTo('.current-product-nav-item','data-href');
+    }
     if($('.isMain')){
         $('#header').addClass('mainHeader');
     }
@@ -338,6 +341,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 $('.video-reviews-list').filter('.slick-initialized').slick('unslick');
             }
         });
+    }
+    //Table counter
+    const tableCounter = (item) =>{
+        const counterTd =  document.querySelectorAll(item);
+        for(let i = 0;i<counterTd.length;i++){
+            counterTd[i].textContent = i+1;
+        }
+    }
+    if($('.table-char-body-v1 .table-char-td-v1:first-child')){
+        tableCounter('.table-char-body-v1 .table-char-td-v1:first-child');
+    }
+    if($('.table-char-v3-body .table-char-v3-td:first-child')){
+        tableCounter('.table-char-v3-body .table-char-v3-td:first-child');
     }
 });
 

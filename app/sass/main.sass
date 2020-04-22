@@ -751,7 +751,7 @@ section.large-lead-form
 .mobile-copyright
   display: none
 //Page banner
-.service-banner-img
+div.service-banner-img
   img
     max-width: 1024px
     top: 20%
@@ -914,5 +914,129 @@ section.large-lead-form
   padding: 12px 30px
 .current-product-main
   margin-top: 74px
-  grid-template-columns: 1fr 2fr 1fr
+  grid-template-columns: 1fr 1.5fr 1fr
+  grid-gap: 30px
+.current-product-img
+  img
+    box-shadow: 0 10px 20px rgba(194, 219, 204, 0.3)
+    border-radius: 3px
+.current-product-char-list
+  counter-reset: myCounter
+.current-product-char-list-item
+  @include list-type-none
+  margin-bottom: 10px
+  &:before
+    counter-increment: myCounter
+    content: counter(myCounter)
+    display: inline-block
+    border: 2px solid rgba(194, 219, 204, 0.3)
+    border-radius: 3px
+    color: #424242
+    font-size: 14px
+    width: 30px
+    height: 30px
+    line-height: 35px
+    text-align: center
+    margin-right: 20px
+.current-product-info
+  background: rgba(194, 219, 204, 0.3)
+  border-radius: 3px
+  padding: 30px
+  .bold-percent
+    font-size: 25px
+    margin-bottom: 40px
+    line-height: 25px
+.current-description
+  padding-top: 50px
+  .current-product-header
+    margin-bottom: 30px
+.current-description-content
+  p
+    font-size: 16px
+.tech-char
+  .current-product-header
+    margin-bottom: 58px
+.tech-char-title
+  margin-bottom: 70px
+.tech-char-first-title
+  margin-bottom: 36px
+.table-char-td-v1,.table-char-v2-td,.table-char-v3-td
+  padding: 5px
+  color: $black
+  font-size: 16px
+.table-char-header-v1,.table-char-v3-header
+  .table-char-td-v1,.table-char-v3-td
+    font-weight: bold
+    color: $black
+    font-size: 21px
+.table-char-td-v1-empty
+  width: 7%
+  border: none
+.table-char-v1,.table-char-v2,.table-char-v3
+  border-collapse: collapse
+  width: 100%
+.table-char-v1
+  margin-bottom: 80px
+.table-char-body-v1,.table-char-v3-body
+  .table-char-td-v1,.table-char-v3-td
+    border-right: 3px solid #F1F1F2
+  .table-char-tr-v1:nth-child(odd)
+    background: #DCDDDF
+    .table-char-td-v1:first-child
+      background: #00622E
+      color: $white
+  .table-char-tr-v1:nth-child(even)
+    background: #f3f3f3
+    .table-char-td-v1:first-child
+      background: #59905f
+      color: $white
+.table-char-td-v1:first-child,.table-char-td-v1:last-child,.table-char-td-v1:nth-child(2),.table-char-v3-td:first-child,.table-char-v3-td:last-child
+    border: none
+.table-char-body-v1 .table-char-td-v1:first-child
+  color: $white
+.table-char-td-v1:not(:nth-child(2))
+  text-align: center
+.table-char-v2
+  text-align: center
+  margin-bottom: 60px
+.table-char-v2-head
+  font-weight: bold
+  font-size: 18px
+  text-align: center
+  .table-char-v2-td:first-child
+    background: #00622E
+    color: $white
+.table-char-v2-tr:nth-child(odd)
+  background: #DCDDDF
+.table-char-v2-tr:nth-child(even)
+  background: #f3f3f3
+.table-char-v3-td:first-child
+  text-align: center
+  width: 25px
+.table-char-v3-body
+  .table-char-v3-tr:nth-child(even)
+    background: #DCDDDF
+    .table-char-v3-td:first-child
+      background: #00622E
+      color: $white
+  .table-char-v3-tr:nth-child(odd)
+    background: #f3f3f3
+    .table-char-v3-td:first-child
+      background: #59905f
+      color: $white
+.table-char-v3-header
+  .table-char-v3-td:nth-child(3),.table-char-v3-td:nth-child(4),.table-char-v3-td:nth-child(5),.table-char-v3-td:nth-child(6)
+    background: #DCDDDF
+  .table-char-v3-td:nth-child(3)
+    border-right: 3px solid #F1F1F2
+    padding-left: 20px
+  .table-char-v3-td:nth-child(4),.table-char-v3-td:nth-child(5)
+    border: 3px solid #F1F1F2
+    border-left: 0
+    border-top: 0
+  .table-char-v3-tr:first-child
+    .table-char-v3-td:nth-child(6)
+      border-bottom: 3px solid #F1F1F2 !important
+.table-char-v3-td:nth-child(3),.table-char-v3-td:nth-child(4),.table-char-v3-td:nth-child(5),.table-char-v3-td:nth-child(6)
+  text-align: center
 @import 'media'
