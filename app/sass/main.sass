@@ -22,8 +22,24 @@ input, textarea
   padding: 0
 ul
   list-style-type: none
-ol:not([class]),ul:not([class])
-  padding-left: 65px
+ol:not([class])
+  counter-reset: myCounter
+  li
+    @include list-type-none
+    margin-bottom: 10px
+    &:before
+      counter-increment: myCounter
+      content: counter(myCounter)
+      display: inline-block
+      border: 2px solid rgba(194, 219, 204, 0.3)
+      border-radius: 3px
+      color: #424242
+      font-size: 14px
+      width: 30px
+      height: 30px
+      line-height: 35px
+      text-align: center
+      margin-right: 20px
 a:not([class])
   text-decoration: underline
 button
@@ -920,24 +936,6 @@ div.service-banner-img
   img
     box-shadow: 0 10px 20px rgba(194, 219, 204, 0.3)
     border-radius: 3px
-.current-product-char-list
-  counter-reset: myCounter
-.current-product-char-list-item
-  @include list-type-none
-  margin-bottom: 10px
-  &:before
-    counter-increment: myCounter
-    content: counter(myCounter)
-    display: inline-block
-    border: 2px solid rgba(194, 219, 204, 0.3)
-    border-radius: 3px
-    color: #424242
-    font-size: 14px
-    width: 30px
-    height: 30px
-    line-height: 35px
-    text-align: center
-    margin-right: 20px
 .current-product-info
   background: rgba(194, 219, 204, 0.3)
   border-radius: 3px
