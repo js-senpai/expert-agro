@@ -40,6 +40,8 @@ ol:not([class])
       line-height: 35px
       text-align: center
       margin-right: 20px
+ul:not([class])
+
 a:not([class])
   text-decoration: underline
 button
@@ -1092,4 +1094,34 @@ div.service-banner-img
   font-weight: bold
 .mobile-table-v2
   margin-bottom: 20px
+//About company
+.about-company
+  .breadcrumbs
+    margin-bottom: 0
+.about-company-title
+  margin-top: 0
+.about-company-advantages-list
+  grid-template-columns: repeat(3,1fr)
+  grid-gap: 30px
+  margin-bottom: 90px
+  margin-top: 49px
+.about-company-advantages-list-item
+  grid-template-columns: 81px 1fr
+  grid-gap: 20px
+  position: relative
+.about-company-advantages-star
+  position: absolute
+  top: 5px
+  left: calc(100%/6)
+  color: #199525
+  font-size: 13px
+.about-company-advantages-number
+  color: #F3F3F3
+  font-weight: bold
+  font-size: 144px
+  line-height: 120px
+.about-company-info
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+  font-size: 18px
 @import 'media'
