@@ -41,7 +41,21 @@ ol:not([class])
       text-align: center
       margin-right: 20px
 ul:not([class])
-
+  li
+    @include list-type-none
+    position: relative
+    padding-left: 45px
+    margin: 25px 0
+    &:before
+      content: ''
+      width: 10px
+      height: 10px
+      display: block
+      position: absolute
+      top: 35%
+      left: 0
+      border-radius: 50%
+      border: 2px solid #199525
 a:not([class])
   text-decoration: underline
 button
@@ -1106,13 +1120,10 @@ div.service-banner-img
   margin-bottom: 90px
   margin-top: 49px
 .about-company-advantages-list-item
-  grid-template-columns: 81px 1fr
+  grid-template-columns: 81px 8px 1fr
   grid-gap: 20px
   position: relative
 .about-company-advantages-star
-  position: absolute
-  top: 5px
-  left: calc(100%/6)
   color: #199525
   font-size: 13px
 .about-company-advantages-number
@@ -1124,4 +1135,42 @@ div.service-banner-img
   grid-template-columns: repeat(2,1fr)
   grid-gap: 30px
   font-size: 18px
+.list-title
+  font-weight: bold
+  color: $black
+.about-company-info-title
+  color: $black
+  margin-bottom: 40px
+  font-weight: bold
+  font-size: 64px
+  line-height: 55px
+.about-company-info-item
+  img
+    width: 100%
+    height: 100%
+    display: block
+    object-fit: cover
+//About news
+.about-news-subtitle
+  text-align: center
+  margin-bottom: 60px
+.about-news-list,.about-news-item
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+.about-news-img
+  img
+    width: 100%
+    height: 100%
+    display: block
+    object-fit: cover
+    border-radius: 2px
+.about-news-title
+  color: $black
+  font-weight: bold
+  font-size: 24px
+  line-height: 30px
+  margin-bottom: 20px
+.about-news-date
+  margin-bottom: 20px
+  display: block
 @import 'media'
