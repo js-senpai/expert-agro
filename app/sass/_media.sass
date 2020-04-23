@@ -194,6 +194,11 @@
   .tech-char-first-title,.tech-char-title
     margin-bottom: 17px
     padding: 0 20px
+  //About company
+  .about-company-advantages-list,.about-company-info,.about-news-list,.about-news-item
+    grid-template-columns: 1fr
+    font-size: 14px
+
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   .mobile-block
@@ -289,6 +294,25 @@
   .specialists-img
     img
       width: 100%
+  //About company
+  .about-company-advantages-list-item
+    grid-gap: 10px
+    grid-template-columns: 36px 10px 1fr
+  .about-company-advantages-number
+    text-align: center
+    line-height: 65px
+    font-size: 65px
+  .about-company-info-title
+    margin-bottom: 20px
+    font-size: 36px
+  .about-news-title
+    font-size: 18px
+    margin-bottom: 20px
+  .about-news-content
+    font-size: 12px
+  .about-company
+    .about-company-info-item:last-child
+      order: -1
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Sertificates
