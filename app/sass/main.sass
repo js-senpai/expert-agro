@@ -278,16 +278,16 @@ img
 .header-contact
   align-items: center
   justify-content: flex-end
-  .mobile-icon
-    width: 35px
-    height: 35px
-    background: #19954A
-    border-radius: 3px
-    color: #fff
-    line-height: 35px
-    text-align: center
-    margin-right: 14px
-    text-decoration: none
+.mobile-icon
+  width: 35px
+  height: 35px
+  border-radius: 3px
+  color: #fff
+  line-height: 35px
+  text-align: center
+  margin-right: 14px
+  text-decoration: none
+  background: url('../img/icons/tel.svg') #19954A  no-repeat center/50%
 .header-contact-tel
   a
     display: block
@@ -457,14 +457,14 @@ section.catalog
   height: 3px
 .project-tab-list,.current-product-nav,.vacancy-tab-list,.vacancy-popup-cities
   justify-content: flex-start
-.project-tab-list-item:not(:last-of-type),.current-product-nav-item:not(:last-of-type),.vacancy-tab-list-item:not(:last-of-type),.vacancy-popup-cities-item:not(:last-of-type)
+.project-tab-list-item:not(:last-of-type),.current-product-nav-item:not(:last-of-type),.vacancy-tab-list-item:not(:last-of-type),.vacancy-popup-cities-item:not(:last-of-type),.contacts-header-item:not(:last-of-type)
   margin-right: 3%
-.project-tab-list-item,.current-product-nav-item,.vacancy-tab-list-item,.vacancy-popup-cities-item
+.project-tab-list-item,.current-product-nav-item,.vacancy-tab-list-item,.vacancy-popup-cities-item,.contacts-header-item
   padding: 5px 10px
   text-align: center
   cursor: pointer
   border: 2px solid transparent
-.project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active,.vacancy-tab-list-item.active,.vacancy-tab-list-item:hover,.vacancy-popup-cities-item.active,.vacancy-popup-cities-item:hover
+.project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active,.vacancy-tab-list-item.active,.vacancy-tab-list-item:hover,.vacancy-popup-cities-item.active,.vacancy-popup-cities-item:hover,.contacts-header-item.active,.contacts-header-item:hover
   border: 2px solid #8DD094
   border-radius: 3px
 .project-gallery
@@ -1301,4 +1301,138 @@ div.service-banner-img
   justify-content: center
 section.partners-page-banner
   padding-bottom: 0
+//Contacts
+section.contacts-tab
+  padding-top: 32px
+.contacts-header
+  padding-bottom: 30px
+  border-bottom: 1px solid #E9E9E9
+  position: relative
+  &:before
+    content: ''
+    border: 1px solid transparent
+    border-bottom: 1px solid #E9E9E9
+    border-left: 1px solid #E9E9E9
+    display: block
+    width: 5px
+    height: 5px
+    transform: rotate(-45deg)
+    background: $white
+    position: absolute
+    bottom: -5px
+    margin-left: auto
+    margin-right: auto
+    left: 0
+    right: 0
+    text-align: center
+  &>.flex-container
+    justify-content: flex-start
+section.contacts-banner
+  padding-bottom: 0
+.contacts-wrapper
+  display: none
+  padding-top: 50px
+.contacts-wrapper.active
+  display: block
+.contacts-item-header-info
+  grid-template-columns: 35px 1fr
+  grid-gap: 25px
+  align-items: center
+  margin-bottom: 40px
+.mobile-text-contact
+  display: block
+.mobile-text-contact
+  font-weight: bold
+  text-decoration: none
+  color: $black
+  font-size: 14px
+.mobile-icon.adress
+  background-image: url('../img/icons/build.svg')
+.mobile-icon.mail
+  background-image: url('../img/icons/mail.svg')
+.contacts-item-header.req
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+.contacts-wrapper-header
+  margin-bottom: 40px
+.contacts-req,.contacts-socials
+  background: #FFFFFF
+  box-shadow: 0 0 20px rgba(194, 219, 204, 0.3)
+  border-radius: 3px
+  padding: 20px
+.contacts-req
+  grid-row-start: 1
+  grid-row-end: 3
+.contacts-req-title
+  color: $black
+  text-align: center
+  font-size: 24px
+  font-weight: bold
+  margin: 25px 0
+.contacts-req-list
+  width: max-content
+  margin: 10px auto
+.contacts-req-item
+  margin-bottom: 15px
+.contacts-socials
+  grid-template-columns: 55px 144px
+  grid-gap: 20px
+  align-content: center
+.blue-text,.red-text
+  text-decoration: none
+  font-weight: bold
+.red-text
+  color: red
+.blue-text
+  color: #15b6d0
+.contacts-wrapper-main
+  height: 500px
+  margin-bottom: 60px
+  iframe,div,img
+    width: 100%
+    height: 100%
+.contacts-accordion-title
+  text-align: center
+  max-width: 498px
+  font-size: 36px
+  line-height: 48px
+  color: $black
+  margin: 0 auto
+.contacts-accordion
+  margin: 30px auto 130px auto
+  max-width: 990px
+.accordion-toggle
+  position: absolute
+  cursor: pointer
+  display: block
+  transition: all 500ms ease-in-out
+.accordion-content
+  display: none
+.accordion-header
+  position: relative
+  cursor: pointer
+.contacts-accordion-header
+  color: #595959
+  font-weight: 300
+  font-size: 24px
+.contacts-accordion-item
+  border-top: 1px solid #F3F3F3
+  padding: 30px 20px
+.contacts-accordion-toggle
+  width: 30px
+  height: 20px
+  background: url('../img/icons/left.svg') no-repeat 100% center
+  right: 20px
+  top: 40%
+.contacts-accordion-toggle.active
+  transform: rotate(90deg)
+.contacts-accordion-content
+  margin-top: 30px
+  &>.grid-container
+    grid-template-columns: repeat(3,1fr)
+    grid-gap: 30px
+.contacts-accordion-content-item
+  grid-template-columns: repeat(2,auto)
+  grid-gap: 25px
+  justify-content: start
 @import 'media'

@@ -95,11 +95,11 @@
     display: none
   .vacancy-popup
     background-size: 100%
-  .vacancy-tab-list-item
+  .vacancy-tab-list-item,.contacts-header-item
     width: 100%
     margin-bottom: 10px
     border: 2px solid #DDDDDD
-  .vacancy-tab-list-item:not(:last-of-type)
+  .vacancy-tab-list-item:not(:last-of-type),.contacts-header-item:not(:last-of-type)
     margin-right: 0
   .vacancy-popup-cities
     order: -1
@@ -118,6 +118,13 @@
   //Video reviews
   .video-reviews-list
     display: block
+  //Contacts
+  .contacts-item-header
+    width: 100%
+  .contacts-item-header.req,.contacts-accordion-content>.grid-container
+    grid-template-columns: 1fr
+  .contacts-accordion-header
+    font-size: 18px
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 995px)
   section[class]
@@ -339,6 +346,14 @@
   .close-popup-vacancy
     max-width: 20px
     margin-right: 25px
+  //Contacts
+  .contacts-accordion-toggle
+    width: 15px
+    height: 10px
+    background-size: 100%
+  .contacts-wrapper-main,.contacts-wrapper-footer
+    padding-left: 0
+    padding-right: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Sertificates

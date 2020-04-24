@@ -25,22 +25,26 @@ document.addEventListener("DOMContentLoaded", function() {
     //Tab func
     const tabElem = (item,container,name) =>{
         $(`${item}:first-of-type`).addClass('active');
-        $(`${container}:first-of-type`).addClass('active');
         const projGallery = $(`${container}`),
-            projectTab = document.querySelectorAll(`${item}`);
-        let currentTab = 0;
+            projectTabs = document.querySelectorAll(`${item}`),
+            projectTab = $(`${item}`);
+        projGallery.first().addClass('active');
+        projectTab.first().addClass('active');
+        let tabCount = 0;
         projGallery.each(function () {
-            currentTab++;
-            $(this).attr('id', `${name}-${currentTab}`);
+            tabCount++;
+            $(this).attr('id', `${name}-${tabCount}`);
         });
-        for (let i = 0; i < projectTab.length; i++) {
-            projectTab[i].setAttribute('data-href', `#${name}-${i + 1}`);
+        for (let i = 0; i < projectTabs.length; i++) {
+            projectTabs[i].setAttribute('data-href', `#${name}-${i + 1}`);
         }
         $(`${item}`).click(function () {
             if (!$(this).hasClass('active')) {
                 let currentTab = $(this).attr('data-href');
                 $(this).addClass('active').siblings().removeClass('active');
-                $(currentTab).addClass('active').siblings().removeClass('active');
+                if($(currentTab)){
+                    $(currentTab).addClass('active').siblings().removeClass('active');
+                }
             }
         });
     }
@@ -411,6 +415,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         $('.close-popup-vacancy').click(function(){
             $('.vacancy-popup').fadeOut(500).siblings('.grid-container').removeClass('hidden');
+        })
+    }
+    //Vacancy tab
+    if($('.contacts-wrapper')){
+        tabElem('.contacts-header-item','.contacts-wrapper','cont');
+    }
+    //Accordion
+    if($('.accordion-toggle')){
+        $('.accordion-header').click(function () {
+            $(this).find('.accordion-toggle').toggleClass('active').parent().next('.accordion-content').slideToggle(500);
         })
     }
 });
