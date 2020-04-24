@@ -391,7 +391,7 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.vacancy-popup-text').html(vacancyInfo);
             vacancyCities.each(function () {
                 if ($(this).text() === city) {
-                    $(this).addClass('active');
+                    $(this).addClass('active').siblings().removeClass('active');
                 }
             });
         });

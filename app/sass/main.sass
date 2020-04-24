@@ -1197,7 +1197,8 @@ div.service-banner-img
 .vacancy-list-container
   display: none
   grid-gap: 30px
-  grid-template-columns: repeat(2,1fr)
+  grid-template-columns: repeat(auto-fit,320px)
+  justify-content: start
 .vacancy-tab-header
   padding-bottom: 5px
   margin-bottom: 30px
@@ -1234,6 +1235,7 @@ div.service-banner-img
   font-size: 14px
   padding-top: 20px
   padding-bottom: 20px
+  width: 100%
   &>.grid-container
     grid-template-columns: repeat(3,1fr)
     grid-gap: 30px
@@ -1246,6 +1248,8 @@ div.service-banner-img
   border: none
   background: #19954A
   color: $white
+.vacancy-popup-cities
+  flex-wrap: nowrap
 .close-popup-vacancy
   max-width: 40px
   transform: rotate(-180deg)
@@ -1258,7 +1262,7 @@ div.service-banner-img
   margin-bottom: 20px
 .vacancy-form-input
   @include reset-button
-  width: 100%
+  width: -webkit-fill-available
   color: #9C9C9C
   padding: 24px
   background: $white
@@ -1274,11 +1278,11 @@ div.service-banner-img
   display: block
   width: 50px
   height: 50px
-  background: rgba(194, 219, 204, 0.3)
+  background: #efefef
   border-radius: 40px
   color: #199525
   text-align: center
-  line-height: 50px
+  line-height: 47px
   font-weight: bold
   font-size: 20px
   cursor: pointer
@@ -1286,4 +1290,6 @@ div.service-banner-img
   background: #199525
   &:hover
     background: #015114
+.vacancy-contact
+  font-size: 18px
 @import 'media'

@@ -63,7 +63,7 @@
   .partners-list-item
     text-align: center
   //Project gallery
-  .project-tab-header
+  .project-tab-header,.vacancy-popup-cities
     overflow-x: scroll
   .project-tab-list
     flex-wrap: nowrap
@@ -86,6 +86,23 @@
   //last news
   .last-news-list
     grid-template-columns: repeat(2,1fr)
+  //Vacancy
+  .vacancy-popup-wrapper>.grid-container,.vacancy-container>.grid-container
+    grid-template-columns: 1fr
+  .vacancy-popup-cities-item
+    min-width: 125px
+  .vacancy-empty
+    display: none
+  .vacancy-popup
+    background-size: 100%
+  .vacancy-tab-list-item
+    width: 100%
+    margin-bottom: 10px
+    border: 2px solid #DDDDDD
+  .vacancy-tab-list-item:not(:last-of-type)
+    margin-right: 0
+  .vacancy-popup-cities
+    order: -1
 @media only screen and (max-width: 1045px)
   /*Popup Lead */
   .lead-popup-img img
@@ -209,6 +226,8 @@
     padding: 0 20px
   .toggle-lead
     margin-top: 20px
+  body,.vacancy-banner p,.advantages-text
+    font-size: 14px
   h2,.h2-title,.subtitle
     font-size: 18px
   h1,.title
@@ -313,6 +332,13 @@
   .about-company
     .about-company-info-item:last-child
       order: -1
+  //Vacancy
+  .vacancy-popup-arrow-container
+    display: flex
+    align-content: center
+  .close-popup-vacancy
+    max-width: 20px
+    margin-right: 25px
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Sertificates
@@ -327,6 +353,13 @@
     line-height: 24px
   .service-info-title
     font-size: 12px
+  //Vacancy
+  .vacancy-list-container.active
+    display: block
+  .vacancy-item
+    margin-bottom: 20px
+  .vacancy-item-title
+    font-size: 14px
 @media  only screen and (max-width: 680px)
   body
     font-size: 12px
