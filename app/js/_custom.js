@@ -22,10 +22,36 @@ document.addEventListener("DOMContentLoaded", function() {
     if($('.isMain')){
         $('#header').addClass('mainHeader');
     }
+    //Tab func
+    const tabElem = (item,container,name) =>{
+        $(`${item}:first-of-type`).addClass('active');
+        $(`${container}:first-of-type`).addClass('active');
+        const projGallery = $(`${container}`),
+            projectTab = document.querySelectorAll(`${item}`);
+        let currentTab = 0;
+        projGallery.each(function () {
+            currentTab++;
+            $(this).attr('id', `${name}-${currentTab}`);
+        });
+        for (let i = 0; i < projectTab.length; i++) {
+            projectTab[i].setAttribute('data-href', `#${name}-${i + 1}`);
+        }
+        $(`${item}`).click(function () {
+            if (!$(this).hasClass('active')) {
+                let currentTab = $(this).attr('data-href');
+                $(this).addClass('active').siblings().removeClass('active');
+                $(currentTab).addClass('active').siblings().removeClass('active');
+            }
+        });
+    }
     //Маска для телефона
     if($('.lead-form-input.phone'))
     {
         $('.lead-form-input.phone').mask('+7(000)000-00-00');
+    }
+    if($('.vacancy-form-input.tel'))
+    {
+        $('.vacancy-form-input.tel').mask('+7(000)000-00-00');
     }
     // Youtube
     if($('.youtube')){
@@ -218,25 +244,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     //Project tabs
     if($('.project-gallery')) {
-        $('.project-tab-list-item:first-of-type').addClass('active');
-        $('.project-gallery:first-of-type').addClass('active');
-        const projGallery = $('.project-gallery'),
-            projectTab = document.querySelectorAll('.project-tab-list-item');
-        let currentTab = 0;
-        projGallery.each(function () {
-            currentTab++;
-            $(this).attr('id', 'project-' + currentTab);
-        });
-        for (let i = 0; i < projectTab.length; i++) {
-            projectTab[i].setAttribute('data-href', '#project-' + [i + 1]);
-        }
-        $('.project-tab-list-item').click(function () {
-            if (!$(this).hasClass('active')) {
-                let currentTab = $(this).attr('data-href');
-                $(this).addClass('active').siblings().removeClass('active');
-                $(currentTab).addClass('active').siblings().removeClass('active');
-            }
-        });
+        tabElem('.project-tab-list-item','.project-gallery','project');
     }
     //Spacialist slider
     if($('.specialists-slider')) {
@@ -360,6 +368,50 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     if($('.mobile-table-v3-wrapper')){
         tableCounter('.mobile-table-v3-wrapper .mobile-table-v3-item:first-child');
+    }
+    //Vacancy tab
+    if($('.vacancy-list-container')) {
+        tabElem('.vacancy-tab-list-item','.vacancy-list-container','vac');
+    }
+    if($('.vacancy-item')) {
+        const vacancyItem = $('.vacancy-item'),
+              vacancyCities = $('.vacancy-popup-cities-item'),
+              vacancyPopup = $('.vacancy-popup');
+        vacancyItem.click(function () {
+            $('.vacancy-container>.grid-container').addClass('hidden');
+            const city = $('.vacancy-tab-list-item.active').text(),
+                vacancyName = $(this).find('.vacancy-name').text(),
+                vacancyCond = $(this).find('.vacancy-conditions').text(),
+                vacancyInfo = $(this).find('.vacancy-information').html();
+            vacancyPopup.fadeIn(500);
+            $('.vacancy-form-input.city').val(city);
+            $('.vacancy-popup-title').text(vacancyName);
+            $('.vacancy-form-input.vacancy').val(vacancyName);
+            $('.vacancy-popup-subtitle').text(vacancyCond);
+            $('.vacancy-popup-text').html(vacancyInfo);
+            vacancyCities.each(function () {
+                if ($(this).text() === city) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+        vacancyCities.click(function () {
+            const city = $(this).text(),
+                  vacancyName = vacancyPopup.find('.vacancy-popup-title').text();
+            $(this).addClass('active').siblings().removeClass('active');
+            $('.vacancy-form-input.city').val(city);
+            vacancyItem.each(function () {
+                if(vacancyName === $(this).find('.vacancy-name').text()){
+                    const vacancyCond = $(this).find('.vacancy-conditions').text(),
+                        vacancyInfo = $(this).find('.vacancy-information').html();
+                    $('.vacancy-popup-subtitle').text(vacancyCond);
+                    $('.vacancy-popup-text').html(vacancyInfo);
+                }
+            })
+        });
+        $('.close-popup-vacancy').click(function(){
+            $('.vacancy-popup').fadeOut(500).siblings('.grid-container').removeClass('hidden');
+        })
     }
 });
 

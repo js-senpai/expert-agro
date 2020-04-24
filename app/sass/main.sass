@@ -41,11 +41,13 @@ ol:not([class])
       text-align: center
       margin-right: 20px
 ul:not([class])
+  li:first-child
+    margin-top: 25px
   li
     @include list-type-none
     position: relative
     padding-left: 45px
-    margin: 25px 0
+    margin-bottom: 10px
     &:before
       content: ''
       width: 10px
@@ -451,18 +453,18 @@ section.catalog
   padding-bottom: 5px
   margin-bottom: 30px
   align-items: center
-.project-tab-header::-webkit-scrollbar
+.project-tab-header::-webkit-scrollbar,.vacancy-tab-header::-webkit-scrollbar,.vacancy-popup-cities::-webkit-scrollbar
   height: 3px
-.project-tab-list,.current-product-nav
+.project-tab-list,.current-product-nav,.vacancy-tab-list,.vacancy-popup-cities
   justify-content: flex-start
-.project-tab-list-item:not(:last-of-type),.current-product-nav-item:not(:last-of-type)
+.project-tab-list-item:not(:last-of-type),.current-product-nav-item:not(:last-of-type),.vacancy-tab-list-item:not(:last-of-type),.vacancy-popup-cities-item:not(:last-of-type)
   margin-right: 3%
-.project-tab-list-item,.current-product-nav-item
+.project-tab-list-item,.current-product-nav-item,.vacancy-tab-list-item,.vacancy-popup-cities-item
   padding: 5px 10px
   text-align: center
   cursor: pointer
   border: 2px solid transparent
-.project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active
+.project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active,.vacancy-tab-list-item.active,.vacancy-tab-list-item:hover,.vacancy-popup-cities-item.active,.vacancy-popup-cities-item:hover
   border: 2px solid #8DD094
   border-radius: 3px
 .project-gallery
@@ -481,7 +483,7 @@ section.catalog
     color: $white
     margin-top: 42px
     text-align: center
-.project-gallery.active
+.project-gallery.active,.vacancy-list-container.active
   display: grid
 .project-gallery-list
   grid-template-columns: repeat(3,1fr)
@@ -529,6 +531,8 @@ section.lead-form
   padding: 20px 30px
   border-radius: 3px
   font-size: 18px
+.lead-form-submit:hover
+  color: $white
 .lead-form-input
   background: $white
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
@@ -901,6 +905,7 @@ div.service-banner-img
   width: 100%
   height: 100%
   background-color: #020202a1
+  z-index: 3
   &>.flex-container
     width: 100%
     height: 100%
@@ -1135,6 +1140,11 @@ div.service-banner-img
   grid-template-columns: repeat(2,1fr)
   grid-gap: 30px
   font-size: 18px
+.about-company-container
+  .about-company-info-item
+    li:not(:last-child)
+      padding-bottom: 10px
+      border-bottom: 1px solid #D8D8D8
 .list-title
   font-weight: bold
   color: $black
@@ -1173,4 +1183,107 @@ div.service-banner-img
 .about-news-date
   margin-bottom: 20px
   display: block
+//Vacancy
+.vacancy-banner
+  padding-bottom: 0 !important
+  p,.list-title
+    font-size: 18px
+    color: $black
+.vacancy-container
+  &>.grid-container
+    background: url('../img/_src/vakansion/bg.svg') no-repeat bottom right/60%
+    grid-template-columns: 2fr 1fr
+    grid-gap: 30px
+.vacancy-list-container
+  display: none
+  grid-gap: 30px
+  grid-template-columns: repeat(2,1fr)
+.vacancy-tab-header
+  padding-bottom: 5px
+  margin-bottom: 30px
+.vacancy-item
+  cursor: pointer
+  padding: 30px
+  box-shadow: 0 10px 20px rgba(136, 149, 141, 0.15)
+  border-radius: 3px
+  background: $white
+.vacancy-item-title
+  color: $black
+  font-weight: bold
+  font-size: 18px
+  line-height: 24px
+  margin-bottom: 20px
+.vacancy-advantages
+  margin: 80px 0 40px 0
+//Vacancy popup
+.vacancy-popup
+  height: 100%
+  display: none
+  background: url('../img/_src/vakansion/bg-popup.svg')   bottom right/contain $white no-repeat
+.vacancy-popup-text
+  ul
+    li
+      padding-left: 23px
+      &:before
+        width: 6px
+        height: 6px
+        top: 25%
+  p
+    margin-bottom: 5px
+.vacancy-popup-wrapper
+  font-size: 14px
+  padding-top: 20px
+  padding-bottom: 20px
+  &>.grid-container
+    grid-template-columns: repeat(3,1fr)
+    grid-gap: 30px
+.vacancy-popup-title
+  margin-bottom: 10px
+.vacancy-popup-cities-item
+  max-height: 24px
+  border: none
+.vacancy-popup-cities-item.active,.vacancy-popup-cities-item:hover
+  border: none
+  background: #19954A
+  color: $white
+.close-popup-vacancy
+  max-width: 40px
+  transform: rotate(-180deg)
+  margin-bottom: 24px
+  cursor: pointer
+.vacancy-popup-form
+  margin-top: 63px
+  max-width: 320px
+.vacancy-form-input-container
+  margin-bottom: 20px
+.vacancy-form-input
+  @include reset-button
+  width: 100%
+  color: #9C9C9C
+  padding: 24px
+  background: $white
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
+  border-radius: 3px
+  font-size: 18px
+.vacancy-form-file-container
+  grid-template-columns: 50px 177px
+  grid-gap: 40px
+  justify-content: start
+  margin-bottom: 30px
+.vacancy-form-file
+  display: block
+  width: 50px
+  height: 50px
+  background: rgba(194, 219, 204, 0.3)
+  border-radius: 40px
+  color: #199525
+  text-align: center
+  line-height: 50px
+  font-weight: bold
+  font-size: 20px
+  cursor: pointer
+.vacancy-form-submit
+  background: #199525
+  &:hover
+    background: #015114
 @import 'media'
