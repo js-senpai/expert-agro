@@ -691,6 +691,7 @@ section.large-lead-form
   &>.grid-container
     grid-template-columns: repeat(auto-fit,200px)
     align-items: center
+    justify-content: center
 .partners-title
   margin-bottom: 60px
   text-align: center
@@ -1117,7 +1118,7 @@ div.service-banner-img
 .about-company
   .breadcrumbs
     margin-bottom: 0
-.about-company-title
+.about-company-title,.partners-page-title
   margin-top: 0
 .about-company-advantages-list
   grid-template-columns: repeat(3,1fr)
@@ -1292,4 +1293,12 @@ div.service-banner-img
     background: #015114
 .vacancy-contact
   font-size: 18px
+//Partners page
+.partners-page-list
+  grid-template-columns: repeat(auto-fit,200px)
+  grid-gap: 30px
+  align-items: center
+  justify-content: center
+section.partners-page-banner
+  padding-bottom: 0
 @import 'media'
