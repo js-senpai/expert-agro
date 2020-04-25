@@ -1,5 +1,15 @@
 @import "vars"
 /*==========  Desktop First  ==========*/
+@media screen and (min-width: 1190px)
+  .project-page-list
+    .project-gallery-list
+      img
+        max-height: initial
+      a
+        display: none
+        max-height: 100%
+      a:nth-child(1),a:nth-child(2),a:nth-child(3)
+        display: block
 @media screen and (max-width: 1320px)
   .page-banner-item,div.service-banner-img
     img
@@ -103,6 +113,13 @@
     margin-right: 0
   .vacancy-popup-cities
     order: -1
+  //Project page
+  .project-page-list
+    grid-template-columns: 1fr
+    grid-gap: 30px
+    margin-bottom: 40px
+    .project-gallery-list
+      grid-template-columns: repeat(2,1fr)
 @media only screen and (max-width: 1045px)
   /*Popup Lead */
   .lead-popup-img img
@@ -125,6 +142,12 @@
     grid-template-columns: 1fr
   .contacts-accordion-header
     font-size: 18px
+  .video-reviews-grid
+    grid-template-columns: 1fr
+  .sertificates-list
+    grid-template-columns: repeat(2,1fr)
+    img
+      width: 100%
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 995px)
   section[class]
@@ -222,7 +245,9 @@
   .about-company-advantages-list,.about-company-info,.about-news-list,.about-news-item
     grid-template-columns: 1fr
     font-size: 14px
-
+  //Rewards
+  .rewards-list
+    grid-template-columns: repeat(2,1fr)
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   .mobile-block
@@ -235,7 +260,7 @@
     margin-top: 20px
   body,.vacancy-banner p,.advantages-text
     font-size: 14px
-  h2,.h2-title,.subtitle
+  h2,.h2-title,.subtitle,.h2-b-title
     font-size: 18px
   h1,.title
     font-size: 26px

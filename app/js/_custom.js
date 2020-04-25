@@ -427,5 +427,12 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).find('.accordion-toggle').toggleClass('active').parent().next('.accordion-content').slideToggle(500);
         })
     }
+    //Sertificates list
+    if($('.sertificates-list')){
+        let countSert = $('.sertificates-list a').length;
+        if(countSert === 9){
+            $('.sertificates-list a:first-child').addClass('sertificates-list-item-first');
+        }
+    }
 });
 
