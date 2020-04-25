@@ -702,7 +702,6 @@ section.large-lead-form
   &>.grid-container
     grid-template-columns: repeat(auto-fit,200px)
     align-items: center
-    justify-content: center
 .partners-title
   margin-bottom: 60px
   text-align: center
@@ -1308,7 +1307,6 @@ div.service-banner-img
   grid-template-columns: repeat(auto-fit,200px)
   grid-gap: 30px
   align-items: center
-  justify-content: center
 //Contacts
 section.contacts-tab
   padding-top: 32px
@@ -1416,16 +1414,17 @@ section.contacts-banner
   transition: all 500ms ease-in-out
 .accordion-content
   display: none
+  margin-top: 30px
 .accordion-header
   position: relative
   cursor: pointer
+.accordion-item
+  border-top: 1px solid #F3F3F3
+  padding: 30px 0
 .contacts-accordion-header
   color: #595959
   font-weight: 300
   font-size: 24px
-.contacts-accordion-item
-  border-top: 1px solid #F3F3F3
-  padding: 30px 20px
 .contacts-accordion-toggle
   width: 30px
   height: 20px
@@ -1435,7 +1434,6 @@ section.contacts-banner
 .contacts-accordion-toggle.active
   transform: rotate(90deg)
 .contacts-accordion-content
-  margin-top: 30px
   &>.grid-container
     grid-template-columns: repeat(3,1fr)
     grid-gap: 30px
@@ -1467,4 +1465,43 @@ section.about-news-page
     margin-top: 20px
 .project-page.project-gallery.active
   display: block
+//Repair page
+.partners-repair-list,.partners-dillers-list
+  padding-top: 50px
+.repair-info
+  font-size: 18px
+//Dillers
+.dillers-social
+  font-size: 14px
+  grid-template-columns: repeat(auto-fit,215px)
+  justify-content: start
+.dillers-info
+  margin-top: 40px
+//FAQ
+.accordion-faq-header
+  margin: 0
+  padding-left: 35px
+.faq-accordion-toggle
+  left: 0
+  top: 15%
+  font-size: 14px
+  color: #199525
+.faq-accordion-toggle.active
+  transform: rotate(-90deg)
+//Pays page
+.pay-advantages-list-item
+  grid-template-columns: 81px 1fr
+.pay-advantages-list
+  margin-bottom: 0
+.pay-methods-list
+  margin-top: 40px
+  grid-template-columns: repeat(3,1fr)
+  grid-gap: 30px
+.pay-methods-img
+  width: 50px
+  height: 50px
+.pay-methods-list-item
+  background: #F3F3F3
+  border-radius: 3px
+  padding: 30px
 @import 'media'
