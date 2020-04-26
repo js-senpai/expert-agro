@@ -434,5 +434,15 @@ document.addEventListener("DOMContentLoaded", function() {
             $('.sertificates-list a:first-child').addClass('sertificates-list-item-first');
         }
     }
+    //Blog page
+    if($('.blog-nav-item')){
+        tabElem('.blog-nav-item','.blog-post-list','blog-container');
+    }
+    if($('.toggle-blog')){
+        $('.toggle-blog').click(function () {
+            $(this).toggleClass('active');
+            $('.blog-nav').slideToggle(500);
+        })
+    }
 });
 

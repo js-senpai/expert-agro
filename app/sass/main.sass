@@ -27,6 +27,8 @@ ol:not([class])
   li
     @include list-type-none
     margin-bottom: 10px
+    padding-left: 50px
+    position: relative
     &:before
       counter-increment: myCounter
       content: counter(myCounter)
@@ -37,21 +39,23 @@ ol:not([class])
       font-size: 14px
       width: 30px
       height: 30px
+      position: absolute
       line-height: 35px
       text-align: center
-      margin-right: 20px
+      top: 0
+      left: 0
 ul:not([class])
   li:first-child
     margin-top: 25px
   li
     @include list-type-none
     position: relative
-    padding-left: 45px
+    padding-left: 24px
     margin-bottom: 10px
     &:before
       content: ''
-      width: 10px
-      height: 10px
+      width: 7px
+      height: 7px
       display: block
       position: absolute
       top: 35%
@@ -89,19 +93,20 @@ body
   a:active
     color: #3eb54b
   blockquote
-    background: #FAFAFF
-    border-radius: 10px
-    border: 0
-    padding: 30px
-    color: #000000
-    font-size: 16px
-    margin: 0
+    display: grid
+    grid-template-columns: 60px 1fr
+    grid-gap: 25px
     &::before
       content: '”'
-      color: #8888D3
-      font-size: 48px
       display: block
-      line-height: 25px
+      width: 60px
+      height: 60px
+      text-align: center
+      color: #199525
+      font-size: 6em
+      border-radius: 50%
+      background: #efefef
+      line-height: 105px
   p
     margin-bottom: 30px
 //Titles
@@ -254,7 +259,7 @@ section.white-bg,div.white-bg
   background-color: transparent
   grid-template-columns: 50px 1fr
   cursor: pointer
-.toggle-menu
+.toggle-menu,.toggle-blog-menu
   flex-direction: column
   justify-content: center
   align-content: center
@@ -1504,4 +1509,91 @@ section.about-news-page
   background: #F3F3F3
   border-radius: 3px
   padding: 30px
+//Our clients
+.our-clients-list
+  grid-template-columns: repeat(auto-fit,322px)
+.our-clients-list-item
+  border-radius: 3px
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  height: 185px
+  border: 1px solid #E9E9E9
+  img
+    max-width: 200px
+.our-clients-title
+  color: $black
+  text-align: center
+  text-transform: uppercase
+  font-size: 18px
+//Blog
+.blog-sidebar
+  border-radius: 3px
+  overflow: hidden
+.blog-container
+  grid-template-columns: 250px 1fr
+  grid-gap: 30px
+.blog-post-list
+  grid-template-columns: repeat(2,1fr)
+  margin: 0
+.blog-nav-item
+  padding: 15px
+  font-size: 13px
+  border: 1px solid  #E9E9E9
+  cursor: pointer
+.blog-nav-item.active,.toggle-blog
+    border: 1px solid transparent
+    background: #199525
+    color: $white
+.toggle-blog
+  padding: 15px
+  grid-template-columns: 20px 1fr
+  grid-gap: 15px
+  margin-bottom: 5px
+  cursor: pointer
+  display: none
+  .toggle-dec
+    background: $white
+.toggle-blog.active
+  .toggle-dec:nth-of-type(2)
+    display: none
+  .toggle-dec:nth-of-type(1)
+    transform: rotate(50deg)
+  .toggle-dec:nth-of-type(3)
+    transform: rotate(-50deg)
+    margin-top: -5px
+//Blog page
+.blog-page-breadcrumbs
+  justify-content: center
+  margin-bottom: 25px
+.blog-page-banner-title
+  margin: 0 0 43px 0
+  text-align: center
+.blog-page-banner-img
+  border-radius: 3px
+  overflow: hidden
+  img
+    width: 100%
+section.blog-page-content
+  padding-top: 30px
+  h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote,.blog-page-content-info,.blog-page-content-two-b
+    margin-bottom: 30px
+  ol:not([class])
+    li
+      &:before
+        color: #199525
+        border: none
+        background: rgba(194, 219, 204, 0.3)
+.blog-page-content-info
+  grid-template-columns: repeat(3,1fr)
+  grid-gap: 30px
+  background: rgba(194, 219, 204, 0.3)
+.blog-page-content-info-item
+  padding: 30px
+  &:not(:last-of-type)
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.05)
+.blog-page-content-two-b
+  grid-template-columns: auto auto
+  grid-gap: 30px
 @import 'media'

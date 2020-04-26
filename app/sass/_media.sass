@@ -251,6 +251,30 @@
   //Pays
   .pay-methods-list
     grid-template-columns: 1fr
+  //Blog
+  .blog-container
+    grid-template-columns: 1fr
+  .toggle-blog
+    display: grid
+  //Blog page
+  .blog-page-content-info
+    grid-template-columns: 1fr
+  .blog-page-content-info-item:not(:last-of-type)
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05)
+  body
+    blockquote
+      display: block
+      &::before
+        margin: 0 auto 15px auto
+        width: 36px
+        height: 36px
+        line-height: 56px
+        font-size: 36px
+  .blog-page-content-two-b
+    grid-template-columns: 1fr
+  .blog-page-banner-img
+    padding-left: 0
+    padding-right: 0
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
   .mobile-block
@@ -393,6 +417,9 @@
   .pay-advantages-list-item
     grid-template-columns: 30px 1fr
     grid-gap: 30px
+  //Blog
+  .blog-post-list
+    grid-template-columns: 1fr
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Sertificates
@@ -539,6 +566,9 @@
   //Own catalog
   .own-catalog-list
     grid-template-columns: 1fr
+  //Our clients
+  .our-clients-list
+    grid-template-columns: 100%
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
