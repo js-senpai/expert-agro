@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }, 1500);
         });
     };
+    //Nav settings
+    if(!$('.nav-menu .nav-menu-item')){
+        $('.nav-menu li').addClass('nav-menu-item');
+    }
+    if(!$('.footer-menu .footer-menu-item')){
+        $('.footer-menu li').addClass('footer-menu-item');
+    }
     //Scroll Tab
     if($('.current-product-nav-item')){
         scrollTo('.current-product-nav-item','data-href');
