@@ -174,7 +174,9 @@
     grid-template-columns: repeat(auto-fit,320px)
   //Lead form
   .lead-form-container,.lead-form-header
-    grid-template-columns: 1fr
+    display: block
+  .lead-form-input-container
+    margin-bottom: 30px
   .lead-form-header
     text-align: center
   .lead-form-img
@@ -426,7 +428,7 @@
   .sertificates-gallery
     display: block
   //Last news
-  .last-news-list
+  .last-news-list,.blog-grid
     grid-template-columns: 1fr
   //Info block
   .service-info-price-title
@@ -559,6 +561,8 @@
     margin-left: 40%
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 375px)
+  .vacancy-popup-item
+    overflow: hidden
   .header-container
     grid-template-columns: repeat(3,1fr)
   .lead-popup-wrapper

@@ -125,7 +125,7 @@ body
   margin-bottom: 6px
 .info-title
   margin-top: 0
-h1
+h1,.h1-title
   @include font(bold,72px,72px)
   color: $black
 h2,.h2-title
@@ -202,11 +202,17 @@ section.white-bg,div.white-bg
   &:hover
     background: #199525
     color: $white
-.more
+.more:not(.alm-load-more-btn)
   display: block
   width: 40px
   height: 27px
   background: url("../img/icons/left-orange.svg") no-repeat center/100%
+.btn-load-more
+  margin: 20px auto
+  &.done
+    background: #e0e0e0
+    border: 1px solid #e0e0e0
+    color: $white
 //Youtube video
 .youtube
   width: 100%
@@ -332,7 +338,7 @@ section.white-bg,div.white-bg
   padding-top: 30px
   padding-bottom: 30px
   &>.grid-container
-    grid-template-columns: repeat(3,1fr)
+    grid-template-columns: repeat(auto-fit,minmax(200px,320px))
     justify-content: space-between
 .product-menu-title
   color: $black
@@ -519,6 +525,9 @@ section.lead-form
   padding-top: 0
   &>.container
     padding-bottom: 50px
+.thank-you
+  display: none
+  padding: 60px 0
 .lead-form-title
   color: $black
   font-size: 36px
@@ -538,7 +547,7 @@ section.lead-form
 .lead-form-header-container
   padding-top: 57px
 .lead-form-container
-  grid-template-columns: repeat(3,1fr)
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
   grid-gap: 30px
 .lead-form-submit,.lead-form-input
   @include reset-button
@@ -579,6 +588,9 @@ section.large-lead-form
   align-items: center
   box-shadow: 0 10px 20px rgba(194, 219, 204, 0.3)
   border-radius: 3px
+.main-about-block-content
+  p
+    margin-bottom: 0
 .main-about-block:not(:last-of-type)
   margin-bottom: 55px
 .main-about-block:first-of-type .main-about-footer
@@ -777,11 +789,18 @@ section.large-lead-form
   grid-column-end: 3
   grid-row-start: 1
   grid-row-end: 3
+  display: block
+  width: 100%
+  height: 100%
 //Last news
 .last-news-list
   margin-top: 60px
   grid-template-columns: repeat(3,1fr)
   grid-gap: 30px
+.last-news-list-item
+  img
+    height: 95px
+    object-fit: cover
 //Footer
 #footer
   background: #00542C
@@ -981,6 +1000,10 @@ div.service-banner-img
     font-size: 25px
     margin-bottom: 40px
     line-height: 25px
+.current-product-char
+  ol:not([class])
+    li
+      margin-bottom: 30px
 .current-description
   padding-top: 50px
   .current-product-header
@@ -1034,6 +1057,10 @@ div.service-banner-img
 .table-char-v2
   text-align: center
   margin-bottom: 60px
+.table-char-v2-td
+  border-right: 3px solid  #E8E8E8
+.table-char-v2-td:first-child,.table-char-v2-td:last-child
+  border: none
 .table-char-v2-head
   font-weight: bold
   font-size: 18px
@@ -1183,6 +1210,8 @@ div.service-banner-img
 .about-news-list,.about-news-item
   grid-template-columns: repeat(2,1fr)
   grid-gap: 30px
+.about-news-list
+  margin-bottom: 30px
 .about-news-img
   img
     width: 100%
@@ -1190,12 +1219,16 @@ div.service-banner-img
     display: block
     object-fit: cover
     border-radius: 2px
+.about-news-content
+  a
+    text-decoration: none
 .about-news-title
   color: $black
   font-weight: bold
   font-size: 24px
   line-height: 30px
   margin-bottom: 20px
+  display: block
 .about-news-date
   margin-bottom: 20px
   display: block
@@ -1289,6 +1322,8 @@ div.service-banner-img
   grid-gap: 40px
   justify-content: start
   margin-bottom: 30px
+  .wpcf7-form-control-wrap.your-file
+    display: none
 .vacancy-form-file
   display: block
   width: 50px
@@ -1470,6 +1505,13 @@ section.about-news-page
     margin-top: 20px
 .project-page.project-gallery.active
   display: block
+.project-page.project-gallery
+  .project-page-list
+    display: none
+  .project-page-list:nth-child(1),.project-page-list:nth-child(2),.project-page-list:nth-child(3),.project-page-list:nth-child(4),.project-page-list:nth-child(5),.project-page-list.active
+    display: grid
+.projects-more
+  display: block
 //Repair page
 .partners-repair-list,.partners-dillers-list
   padding-top: 50px
@@ -1535,8 +1577,14 @@ section.about-news-page
   grid-template-columns: 250px 1fr
   grid-gap: 30px
 .blog-post-list
-  grid-template-columns: repeat(2,1fr)
   margin: 0
+  margin-bottom: 50px
+  display: none
+  &.active
+    display: block
+.blog-grid
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
 .blog-nav-item
   padding: 15px
   font-size: 13px
@@ -1565,16 +1613,21 @@ section.about-news-page
     margin-top: -5px
 //Blog page
 .blog-page-breadcrumbs
-  justify-content: center
-  margin-bottom: 25px
+  .breadcrumbs
+    justify-content: center
+    margin-bottom: 25px
 .blog-page-banner-title
   margin: 0 0 43px 0
   text-align: center
 .blog-page-banner-img
   border-radius: 3px
   overflow: hidden
+  max-height: 434px
   img
     width: 100%
+    height: 100%
+    display: block
+    object-fit: cover
 section.blog-page-content
   padding-top: 30px
   h1,h2,h3,h4,h5,.h1-title,.h2-b-title,.h3-title,.h4-title,.h5-title,blockquote,.blog-page-content-info,.blog-page-content-two-b
