@@ -5,6 +5,29 @@ document.addEventListener("DOMContentLoaded", function() {
         elements_selector: ".lazy"
     });
     lazyLoadInstance.update();
+    //Mobile slider
+    const mobileSlider = (elem) =>{
+        if ($(window).width() <= 880) {
+            $(elem).slick({
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
+            })
+        }
+        $(window).resize(function () {
+            if ($(window).width() <= 880) {
+                $(elem).slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false
+                })
+            } else if ($(window).width() > 880 && $(elem).hasClass('slick-initialized')) {
+                $(elem).filter('.slick-initialized').slick('unslick');
+            }
+        });
+    }
     //Scroll
     const scrollTo = (elem,attr) => {
         $(elem).on("click", function () {
@@ -26,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if($('.current-product-nav-item').length>0){
         scrollTo('.current-product-nav-item','data-href');
     }
-    if($('.isMain')){
+    if($('.isMain').length>0){
         $('#header').addClass('mainHeader');
     }
     //Tab func
@@ -203,41 +226,10 @@ document.addEventListener("DOMContentLoaded", function() {
        $('.product-menu-wrapper').fadeToggle(500);
     });
     $('.submenu').parent().addClass('sub-item');
-    if($(window).width()<=881){
-        $('.product-menu-title').each(function () {
-            if($(this).find('.toggle-nav').length <1 || !$(this).find('.toggle-nav')) {
-                $(this).append('<span class="fas fa-chevron-down toggle-nav"></span>');
-                if($('.toggle-nav').length>0) {
-                    $('.toggle-nav').click(function () {
-                        $(this).toggleClass('active');
-                        $(this).parent().next('.product-menu-list').fadeToggle(500);
-                    });
-                }
-            }
-        })
-    }else if($(window).width()>=881){
-        if($('.toggle-nav') !== undefined){
-            $('.toggle-nav').remove();
-        }
-    }
-    $(window).resize(function () {
-        if($(window).width()<=881){
-            $('.product-menu-title').each(function () {
-                if($(this).find('.toggle-nav').length <1 || !$(this).find('.toggle-nav')) {
-                    $(this).append('<span class="fas fa-chevron-down toggle-nav"></span>');
-                    if($('.toggle-nav').length>0) {
-                        $('.toggle-nav').click(function () {
-                            $(this).toggleClass('active');
-                            $(this).parent().next('.product-menu-list').fadeToggle(500);
-                        });
-                    }
-                }
-            })
-        }else if($(window).width()>881){
-            if($('.toggle-nav') !== undefined){
-                $('.toggle-nav').remove();
-            }
-        }
+    $('.product-menu-title').append('<span class="fas fa-chevron-down toggle-nav"></span>');
+    $('.toggle-nav').click(function () {
+       $(this).toggleClass('active');
+       $(this).parent().next('.product-menu-list').fadeToggle(500);
     });
     //Слайдер специалистов
     if($('.catalog-slider').length>0) {
@@ -309,28 +301,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     //Слайдер cертификатов
     if($('.sertificates-gallery').length>0) {
-        if ($(window).width() <= 795) {
-            $('.sertificates-gallery').slick({
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
-            })
-        } else {
-            $('.sertificates-gallery').filter('.slick-initialized').slick('unslick');
-        }
-        $(window).resize(function () {
-            if ($(window).width() <= 795) {
-                $('.sertificates-gallery').slick({
-                    infinite: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false
-                })
-            } else if ($(window).width() > 795) {
-                $('.sertificates-gallery').filter('.slick-initialized').slick('unslick');
-            }
-        });
+        mobileSlider('.sertificates-gallery');
+    }
+    //Cлайдер в баннере
+    if($('.banner-advantages-container').length>0) {
+        mobileSlider('.banner-advantages-container>.grid-container');
     }
     //Breadcrumbs
     if($('.breadcrumbs-item').length>0){
@@ -339,14 +314,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     //Lead popup
-    if($('.toggle-lead').length>0){
-        $('.toggle-lead').click(function () {
+    $('.header-contact-text').click(function () {
+        $('.lead-popup-container').fadeIn(500);
+    });
+    if($('.lead-popup-container').length>0){
+        $('.close-popup').click(function() {
+            $('.lead-popup-container').fadeOut(500);
+        });
+        $('.toggle-lead,.header-contact-text').click(function () {
            $('.lead-popup-container').fadeIn(500);
         });
-        $('.close-popup').click(function () {
-            $('.close-popup').parent().parent().parent().parent().fadeOut(500);
-        });
-
     }
     //Слайдер cертификатов
     if($('.video-reviews-list').length>0) {
@@ -502,8 +479,8 @@ document.addEventListener("DOMContentLoaded", function() {
               if(countProj === parentCount){
                   return true;
               }else if(countProj < parentCount){
-                  countProj+=1;
-                  $(this).parent().find(`.project-page-list:nth-child(${countProj})`).addClass('active');
+                  countProj = parentCount;
+                  $(this).parent().find(`.project-page-list`).addClass('active');
                   if(countProj === parentCount){
                       $(this).addClass('done');
                   }
@@ -511,9 +488,27 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         $('.project-tab-list-item').click(function(){
             countProj = 5;
-            console.log(countProj)
+            console.log(countProj);
         })
 
     }
+    //Read more
+    if($('.seo-block-container').length>0) {
+        $('.seo-block-container').readmore({
+            speed: 75,
+            lessLink: '<a href="#" class="btn btn-link-green seo-more">Закрыть</a>',
+            moreLink: '<a href="#" class="btn btn-link-green seo-more">Читать далее</a>',
+            heightMargin: 400
+        });
+    }
+    //Contact form input
+    if($('.url-input').length>0) {
+        $('.url-input').val(window.location.href);
+    }
+    //Fancybox
+    $('[data-fancybox]').fancybox({
+        'hideOnOverlayClick':true,
+        'enableEscapeButton':true
+    });
 });
 

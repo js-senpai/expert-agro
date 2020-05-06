@@ -10,6 +10,10 @@
         max-height: 100%
       a:nth-child(1),a:nth-child(2),a:nth-child(3)
         display: block
+  .contacts-accordion-content-item:nth-child(2)
+    justify-content: center
+  .contacts-accordion-content-item:nth-child(3)
+    justify-content: end
 @media screen and (max-width: 1320px)
   .page-banner-item,div.service-banner-img
     img
@@ -188,6 +192,7 @@
       height: 100%
   .lead-form-footer
     margin-top: -40%
+    position: relative
   //Footer
   .footer-item
     width: 50%
@@ -279,6 +284,8 @@
     padding-right: 0
 /* Small Devices, Tablets */
 @media only screen and (max-width : 880px)
+  .toggle-nav
+    display: block
   .mobile-block
     display: block !important
   .desktop-block
@@ -331,12 +338,13 @@
       display: block
   //Main banner
   .banner-advantages-container
-    &>.grid-container,.banner-advantages-item
-      grid-template-columns: 1fr
-  .banner-advantages-item:not(:first-of-type)
-    display: none
+    &>.grid-container
+      display: block
   .banner-advantages-item
     text-align: center
+    grid-template-columns: 1fr
+  .banner-advantages-item:not(:last-of-type)
+    border-right: none
   //Main about
   .equipment-list
     grid-template-columns: repeat(1,1fr)
@@ -355,6 +363,7 @@
     font-size: 36px
     margin-bottom: 0
     margin-top: 30px
+    line-height: 40px
   .history-success-item
     padding: 0
     border: 0
@@ -410,6 +419,9 @@
   .contacts-wrapper-main,.contacts-wrapper-footer
     padding-left: 0
     padding-right: 0
+  .accordion-item
+    padding-left: 20px
+    padding-right: 20px
   //Repair
   .repair-info
     font-size: 12px
@@ -422,6 +434,13 @@
   //Blog
   .blog-post-list
     grid-template-columns: 1fr
+  //Services
+  .service-info-price
+    padding: 20px
+  .service-info-content
+    font-size: 14px
+    .bold-percent
+      margin-top: 0
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 794px)
   //Sertificates
