@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     //Маска для телефона
     $('a[href^="tel:"] ').each(function () {
-       let currentNumber = $(this).text().replace(/\D/g,'');
+       let currentNumber = $(this).attr('href').replace(/\D/g,'');
        $(this).attr('href',`tel:${currentNumber}`);
     });
     if($('.lead-form-input.phone'))
