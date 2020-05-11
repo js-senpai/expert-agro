@@ -97,11 +97,8 @@ body
     display: grid
     grid-template-columns: 60px 1fr
     grid-gap: 25px
-    grid-template-areas: 'quote block-text'
-    grid-area: block-text
     &::before
       content: '”'
-      grid-area: quote
       display: block
       width: 60px
       height: 60px
@@ -265,15 +262,12 @@ section.white-bg,div.white-bg
   background: transparent
 .header-container
   grid-template-columns: 1fr 1fr 2fr 1fr
-  grid-template-areas: 'logo product-menu nav contact-block'
   grid-gap: 5px
 .logo
-  grid-area: logo
   align-items: center
   img
     max-width: 200px
 .product-menu-container
-  grid-area: product-menu
   border-radius: 3px
   width: 236px
   height: 45px
@@ -281,10 +275,7 @@ section.white-bg,div.white-bg
   border: 2px solid #FCBD6D
   background-color: transparent
   grid-template-columns: 50px 1fr
-  grid-template-areas: 'toggle-button toggle-title'
   cursor: pointer
-.toggle-menu
-  grid-area: toggle-button
 .toggle-menu,.toggle-blog-menu
   flex-direction: column
   justify-content: center
@@ -299,7 +290,6 @@ section.white-bg,div.white-bg
     margin-bottom: 2px
     transition: all 500ms ease-in-out
 .toggle-title
-  grid-area: toggle-title
   color: #FFFFFF
   text-transform: uppercase
 .product-menu-container.active
@@ -313,14 +303,12 @@ section.white-bg,div.white-bg
 .nav-menu
   justify-content: center
   align-content: center
-  grid-area: nav
 .nav-menu-item
   margin-right: 4%
   a
     color: #fff
     text-decoration: none
 .header-contact
-  grid-area: contact-block
   align-items: center
   justify-content: flex-end
 .mobile-icon
@@ -364,9 +352,6 @@ section.white-bg,div.white-bg
   &>.grid-container
     grid-template-columns: repeat(auto-fit,minmax(200px,320px))
     justify-content: space-between
-    grid-template-areas: 'product-menu-item product-menu-item product-menu-item'
-.product-menu-item
-  grid-area: product-menu-item
 .product-menu-title
   color: $black
   margin-bottom: 15px
@@ -919,8 +904,6 @@ div.service-banner-img
   img
     width: 100%
     height: 100%
-.service-info-content
-
 .service-info-block
   padding-top: 50px
   padding-bottom: 50px
