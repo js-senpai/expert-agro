@@ -1,4 +1,5 @@
-var gulp         = require('gulp'),
+const gulp         = require('gulp'),
+	    babel = require('gulp-babel'),
 		sass         = require('gulp-sass'),
 		browserSync  = require('browser-sync'),
 		concat       = require('gulp-concat'),
@@ -54,7 +55,7 @@ gulp.task('scripts', function() {
 		'node_modules/readmore-js/readmore.min.js',
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
-		])
+		]).pipe(babel())
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Minify js (opt.)
 	.pipe(gulp.dest('app/js'))

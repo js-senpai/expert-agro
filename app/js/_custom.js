@@ -411,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     //Accordion
     if($('.accordion-toggle').length>0){
-        $('.accordion-header').click(function () {
+        $('.accordion-item').click(function () {
             $(this).find('.accordion-toggle').toggleClass('active').parent().next('.accordion-content').slideToggle(500);
         })
     }

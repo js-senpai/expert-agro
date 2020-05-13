@@ -181,6 +181,8 @@ section.white-bg,div.white-bg
   max-width: 1380px
   padding: 0 30px
   margin: 0 auto
+.visible-block
+  display: flex !important
 //Settings for slider
 .slick-initialized .slick-slide
   outline: none
@@ -499,10 +501,13 @@ section.catalog
   padding: 5px 10px
   text-align: center
   cursor: pointer
-  border: 2px solid transparent
-.project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active,.vacancy-tab-list-item.active,.vacancy-tab-list-item:hover,.vacancy-popup-cities-item.active,.vacancy-popup-cities-item:hover,.contacts-header-item.active,.contacts-header-item:hover
   border: 2px solid #8DD094
   border-radius: 3px
+.project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active,.vacancy-tab-list-item.active,.vacancy-tab-list-item:hover,.vacancy-popup-cities-item.active,.vacancy-popup-cities-item:hover,.contacts-header-item.active,.contacts-header-item:hover
+  background: #8DD094
+  color: $white
+.project-tab-link
+  margin-left: 20px
 .project-gallery
   grid-template-columns: repeat(auto-fit,minmax(320px,1fr))
   grid-column-gap: 30px
@@ -577,8 +582,6 @@ section.lead-form.white-bg
   font-size: 18px
   position: relative
   z-index: 1
-.lead-form-submit:hover
-  color: $white
 .lead-form-input
   background: $white
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
@@ -588,8 +591,10 @@ section.lead-form.white-bg
   font-weight: bold
   background: #015114
   text-align: center
+  z-index: 1
 .lead-form-submit:hover
   background: #3eb54b
+  color: $white
 section.large-lead-form
   padding-bottom: 130px
   .lead-form-header-container
@@ -755,12 +760,13 @@ section.large-lead-form
 .history-success-info
   font-size: 24px
   line-height: 36px
-.history-success-footer,.history-success-item,.history-success-header
+.history-success-footer,.history-success-header
   grid-template-columns: repeat(auto-fit,minmax(320px,1fr))
 .history-success-item
   grid-gap: 30px
   border: 1px solid #E2E2E2
   padding: 60px
+  grid-template-columns: repeat(2,1fr)
 .history-success-item:first-of-type
   border-right-color: transparent
 .history-success-img
@@ -1487,6 +1493,7 @@ section.contacts-banner
 .accordion-item
   border-top: 1px solid #F3F3F3
   padding: 30px 0
+  cursor: pointer
 .contacts-accordion-header
   color: #595959
   font-weight: 300
