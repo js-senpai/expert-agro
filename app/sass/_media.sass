@@ -16,6 +16,15 @@
     justify-content: end
   .project-video
     min-height: 390px
+  .product-menu-list + .product-menu-title
+    margin-top: 50px
+  .project-page.project-gallery
+    .project-gallery-main,.project-gallery-list,.project-gallery-content
+      max-height: 380px
+      overflow: hidden
+    .project-gallery-list
+      img
+        max-height: 106px
 @media screen and (max-width: 1320px)
   .page-banner-item,div.service-banner-img
     img
@@ -59,7 +68,10 @@
   .logo
     justify-content: center
   .product-menu-wrapper
-    top: 148px
+    top: 0
+    width: 100%
+    left: 0
+    right: 0
   /* How work */
   .how-work-steps
     background: none
@@ -81,8 +93,6 @@
   //Project gallery
   .project-tab-header,.vacancy-popup-cities
     overflow-x: scroll
-  .project-tab-list
-    flex-wrap: nowrap
   .project-tab-list-item
     min-width: 200px
   .project-gallery
@@ -193,6 +203,7 @@
       display: block
       width: 100%
       height: 100%
+      position: static
   .lead-form-footer
     margin-top: -40%
     position: relative
@@ -238,6 +249,8 @@
   .current-product-nav-item,.current-product-char-list-item
     width: 100%
     font-size: 12px
+    margin-right: 0 !important
+    margin-bottom: 20px
   .current-product-char-list-item:before
     font-size: 12px
   .current-product-img img
@@ -477,7 +490,7 @@
   .project-gallery .play
     background-size: 20px
   .youtube .youtube-text
-    font-size: 12px
+    font-size: 14px
     line-height: 16px
   //Page banner
   .page-banner

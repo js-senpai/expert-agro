@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Оптимизация таблиц под вордпресс
     if($('.table-char-tr-v1').length>0){
         $('.table-char-body-v1 .table-char-tr-v1').prepend('<td class="table-char-td-v1"></td>');
-        $('.table-char-body-v1 .table-char-tr-v1 td:nth-child(2)').after('<td class="table-char-td-v1-empty"></td>');
+        $('.table-char-tr-v1 td:nth-child(2)').after('<td class="table-char-td-v1-empty"></td>');
     }
     if($('.table-char-v2-head').length>0){
         $('.table-char-v2-head td:first-child').attr('rowspan','2');

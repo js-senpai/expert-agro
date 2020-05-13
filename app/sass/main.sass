@@ -93,6 +93,7 @@ body
     color: #3eb54b
   a:active
     color: #3eb54b
+    outline: none
   blockquote
     display: grid
     grid-template-columns: 60px 1fr
@@ -181,6 +182,7 @@ section.white-bg,div.white-bg
   max-width: 1380px
   padding: 0 30px
   margin: 0 auto
+  position: relative
 .visible-block
   display: flex !important
 //Settings for slider
@@ -254,6 +256,7 @@ section.white-bg,div.white-bg
 .youtube-container
   justify-content: center
   width: 100%
+  height: 100%
 /* Header */
 #header
   background: linear-gradient(180deg, #00542C 0%, rgba(0, 84, 44, 0) 100%), linear-gradient(90deg, #00542C 0%, rgba(0, 84, 44, 0) 42.56%), linear-gradient(0deg, rgba(0, 84, 44, 0.5), rgba(0, 84, 44, 0.5)), url('../img/_src/header/bg.png') no-repeat center/cover
@@ -345,18 +348,21 @@ section.white-bg,div.white-bg
   position: absolute
   z-index: 10
   background-color: $white
-  left: 0
-  right: 0
-  top: 125px
-  width: 100%
+  right: 25px
+  top: 40px
+  width: 77%
   padding-top: 30px
   padding-bottom: 30px
+  max-width: 1106px
+  box-shadow: 0px 0px 40px rgba(126, 126, 126, 0.3)
   &>.grid-container
     grid-template-columns: repeat(auto-fit,minmax(200px,320px))
     justify-content: space-between
 .product-menu-title
   color: $black
   margin-bottom: 15px
+  margin-top: 0
+  line-height: 24px
   a
     color: $black
     text-decoration: none
@@ -451,8 +457,8 @@ section.catalog
   cursor: pointer
 .block-slider-container:hover
   box-shadow: 0 20px 40px rgba(198, 198, 198, 0.46)
-  .block-slider-img a
-    background: transparent
+  .block-slider-img img
+    opacity: 1
 .block-slider-img
   height: 186px
   position: relative
@@ -465,10 +471,10 @@ section.catalog
     bottom: 0
     left: 0
     right: 0
-    background: #dedbdba6
   img
     height: 100%
     width: 100%
+    opacity: .7
 .block-slider-content
   padding: 0 30px
   height: 80px
@@ -493,6 +499,8 @@ section.catalog
   align-items: center
 .project-tab-header::-webkit-scrollbar,.vacancy-tab-header::-webkit-scrollbar,.vacancy-popup-cities::-webkit-scrollbar
   height: 3px
+.project-tab-list
+  flex-wrap: nowrap
 .project-tab-list,.current-product-nav,.vacancy-tab-list,.vacancy-popup-cities
   justify-content: flex-start
 .project-tab-list-item:not(:last-of-type),.current-product-nav-item:not(:last-of-type),.vacancy-tab-list-item:not(:last-of-type),.vacancy-popup-cities-item:not(:last-of-type),.contacts-header-item:not(:last-of-type)
@@ -524,6 +532,7 @@ section.catalog
     color: $white
     margin-top: 42px
     text-align: center
+    padding: 0 76px
 .project-gallery.active,.vacancy-list-container.active
   display: grid
 .project-gallery-list
@@ -565,36 +574,51 @@ section.lead-form.white-bg
   grid-template-columns: 2fr 1fr
   grid-gap: 30px
 .lead-form-img
+  position: relative
   img
     width: 100%
-    margin-top: -25px
+    object-fit: cover
+    right: 0
+    top: -25px
+    position: absolute
 .lead-form-header-container
   padding-top: 57px
+.lead-form-footer
+  margin-top: 30px
 .lead-form-container
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr))
   grid-gap: 30px
 .lead-form-submit,.lead-form-input
   @include reset-button
   display: block
-  width: -webkit-fill-available
+  width: 100%
   padding: 20px 30px
   border-radius: 3px
   font-size: 18px
   position: relative
+  background: transparent
   z-index: 1
-.lead-form-input
+  width: -webkit-fill-available
+.ajax-loader
+  display: none !important
+.lead-form-input-container.lead-form-inputs,.lead-form-input-container.lead-form-submits
+  height: 60px
+  z-index: 1
+.lead-form-input-container.lead-form-inputs
+  width: 100%
   background: $white
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05)
+.lead-form-input-container.lead-form-submits
+  background: #015114
+  &:hover
+    background: #3eb54b
+    color: $white
 .lead-form-submit
   cursor: pointer
   color: $white
   font-weight: bold
-  background: #015114
   text-align: center
   z-index: 1
-.lead-form-submit:hover
-  background: #3eb54b
-  color: $white
 section.large-lead-form
   padding-bottom: 130px
   .lead-form-header-container
@@ -797,7 +821,7 @@ section.large-lead-form
   img
     height: 231px
     object-fit: cover
-    object-position: center
+    object-position: top center
 .specialists-slider-item
   margin: 0 15px
   text-align: center
@@ -1007,6 +1031,8 @@ div.service-banner-img
 .own-catalog-list
   grid-template-columns: repeat(auto-fit,320px)
   grid-gap: 30px
+.own-catalog-title
+  text-decoration: none
 .own-catalog-img
   a
     background: none
@@ -1527,12 +1553,20 @@ section.about-news-page
   grid-template-columns: repeat(4,1fr)
   grid-gap: 30px
 //Project-gallery page
+.project-gallery-main
+  border-radius: 5px
+  .youtube-container
+    align-content: flex-end
 .project-page-list
   grid-template-columns: 2.7fr 1fr 2fr
   grid-column-gap: 30px
   margin-bottom: 50px
   .project-gallery-list
     grid-template-columns: 1fr
+    img
+      opacity: 0.8
+    img:hover
+      opacity: 1
 .project-gallery-content
   p:first-of-type
     margin-top: 20px
@@ -1603,6 +1637,8 @@ section.about-news-page
   text-transform: uppercase
   font-size: 18px
 //Blog
+.blog-news-title
+  font-size: 24px
 .blog-sidebar
   border-radius: 3px
   overflow: hidden
