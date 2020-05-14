@@ -7,8 +7,11 @@
   color: #7c7c7c
 input, textarea
   outline: none
+  @include reset-button
   &:focus
     color: #7c7c7c
+  &:focus,&:hover,&:active
+    @include reset-button
 ::-webkit-scrollbar
   width: 5px
 ::-webkit-scrollbar-track
@@ -91,6 +94,7 @@ body
     color: #199525
   a:hover
     color: #3eb54b
+    outline: none
   a:active
     color: #3eb54b
     outline: none
@@ -439,6 +443,9 @@ section.catalog
   z-index: 1
 .catalog-slider-title,.own-catalog-info
   text-decoration: none
+.catalog-slider-info
+  .slider-info-arrow
+    height: 100%
 .slider-btn-right
   right: -2%
 .slider-btn-left
@@ -504,7 +511,7 @@ section.catalog
 .project-tab-list,.current-product-nav,.vacancy-tab-list,.vacancy-popup-cities
   justify-content: flex-start
 .project-tab-list-item:not(:last-of-type),.current-product-nav-item:not(:last-of-type),.vacancy-tab-list-item:not(:last-of-type),.vacancy-popup-cities-item:not(:last-of-type),.contacts-header-item:not(:last-of-type)
-  margin-right: 3%
+  margin-right: 1%
 .project-tab-list-item,.current-product-nav-item,.vacancy-tab-list-item,.vacancy-popup-cities-item,.contacts-header-item
   padding: 5px 10px
   text-align: center
