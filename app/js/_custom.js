@@ -438,6 +438,13 @@ document.addEventListener("DOMContentLoaded", function() {
             $(this).fadeOut(500).siblings('.thank-you').fadeIn(500);
         })
     }
+    if($('.lead-popup-container .wpcf7')){
+        $('.lead-popup-container .wpcf7').on('wpcf7mailsent',function(){
+            setTimeout(()=>{
+                $('.lead-popup-container').fadeOut(500).siblings('.thank-you').fadeIn(500);
+            },1000);
+        })
+    }
     //Оптимизация таблиц под вордпресс
     if($('.table-char-tr-v1').length>0){
         $('.table-char-body-v1 .table-char-tr-v1').prepend('<td class="table-char-td-v1"></td>');
@@ -510,5 +517,11 @@ document.addEventListener("DOMContentLoaded", function() {
         'hideOnOverlayClick':true,
         'enableEscapeButton':true
     });
+    //Vacancy input file
+    $('.file-input').change(function(){
+        let currentValue = $(this).val(),
+                filename = currentValue.replace(/.*\\/g,'');
+        $(this).parent().parent().find('.vacancy-form-file-text').text(filename);
+    })
 });
 
