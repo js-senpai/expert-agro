@@ -63,7 +63,12 @@ document.addEventListener("DOMContentLoaded", function() {
         let tabCount = 0;
         projGallery.each(function () {
             tabCount++;
-            $(this).attr('id', `${name}-${tabCount}`);
+            $(this).attr('id', `${name}-${tabCount}`);;
+
+        });
+        $('.project-gallery-list').each(function () {
+            tabCount++;
+            $(this).find('a[data-fancybox]').attr('data-fancybox',`gallery-${tabCount}`);
         });
         for (let i = 0; i < projectTabs.length; i++) {
             projectTabs[i].setAttribute('data-href', `#${name}-${i + 1}`);
@@ -450,9 +455,6 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.table-char-body-v1 .table-char-tr-v1').prepend('<td class="table-char-td-v1"></td>');
         $('.table-char-tr-v1 td:nth-child(2)').after('<td class="table-char-td-v1-empty"></td>');
     }
-    if($('.table-char-v2-head').length>0){
-        $('.table-char-v2-head td:first-child').attr('rowspan','2');
-    }
     if($('.table-char-v3-header').length>0){
         $('.table-char-v3-header .table-char-v3-tr:first-child').find('td:nth-child(2),td:nth-child(3)').attr('rowspan','1');
         $('.table-char-v3-header .table-char-v3-tr:nth-child(2)').prepend('<td class="table-char-v3-td hidden-td"></td><td class="table-char-v3-td hidden-td"></td><td class="table-char-v3-td"></td>');
@@ -522,6 +524,8 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentValue = $(this).val(),
                 filename = currentValue.replace(/.*\\/g,'');
         $(this).parent().parent().find('.vacancy-form-file-text').text(filename);
-    })
+    });
+    //Browser check
+    document.querySelectorAll("#buorg").length>0&&document.querySelector(".buorg-buttons a").addEventListener("click",function(){document.querySelector("#buorg").classList.add("visible-block")});
 });
 
