@@ -94,7 +94,7 @@
   .project-tab-header,.vacancy-popup-cities
     overflow-x: scroll
   .project-tab-list-item
-    min-width: 200px
+    min-width: max-content
   .project-gallery
     grid-template-columns: 1fr
     grid-gap: 30px
@@ -361,6 +361,13 @@
     grid-template-columns: 1fr
   .banner-advantages-item:not(:last-of-type)
     border-right: none
+  //Partners list
+  .partners-list>.grid-container.slick-slider .slick-track
+    display: block
+  .partners-list>.grid-container.slick-slider .partners-list-item
+    padding: 0
+  .partners-list>.grid-container.slick-slider .slider-btn
+    display: none !important
   //Main about
   .equipment-list
     grid-template-columns: repeat(1,1fr)

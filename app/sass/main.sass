@@ -383,6 +383,10 @@ section.white-bg,div.white-bg
   padding: 5px 0
 .submenu-item,.submenu-links-item
   position: relative
+  color: #C8C8C8
+  font-size: 12px
+  line-height: 24px
+  text-decoration: none
   a
     color: #C8C8C8
     font-size: 12px
@@ -519,15 +523,22 @@ section.catalog
   cursor: pointer
   border: 2px solid #8DD094
   border-radius: 3px
+  display: flex
+  justify-content: center
+  align-items: center
 .project-tab-list-item.active,.project-tab-list-item:hover,.current-product-nav-item:hover,.current-product-nav-item.active,.vacancy-tab-list-item.active,.vacancy-tab-list-item:hover,.vacancy-popup-cities-item.active,.vacancy-popup-cities-item:hover,.contacts-header-item.active,.contacts-header-item:hover
   background: #8DD094
   color: $white
 .project-tab-link
   margin-left: 20px
+.project-gallery.multiply:not(.active):not(:last-child)
+  margin-bottom: 25px
+.project-gallery:not(.multiply)
+  display: none
 .project-gallery
   grid-template-columns: repeat(auto-fit,minmax(320px,1fr))
   grid-column-gap: 30px
-  display: none
+
   border-radius: 3px
   iframe
     width: 100%
@@ -768,9 +779,23 @@ section.large-lead-form
   .advantages-title
     margin-bottom: 10px
 //Partners
+.partners-list.services-partners-list
+  padding: 50px 0
 .partners-list-item img
   background: #F4F4F4
   width: 100%
+.partners-list>.grid-container.slick-slider
+  display: block
+  position: relative
+.partners-list>.grid-container.slick-slider .slick-track
+  display: flex
+  align-items: center
+.partners-list>.grid-container.slick-slider .partners-list-item
+  padding: 0 1%
+.partners-list>.grid-container.slick-slider .slider-btn-right
+  right: 0
+.partners-list>.grid-container.slick-slider .slider-btn-left
+  left: 0
 .partners-main
   margin-top: -100px
 .partners-list
@@ -1590,7 +1615,7 @@ section.about-news-page
 .project-page.project-gallery
   .project-page-list
     display: none
-  .project-page-list:nth-child(1),.project-page-list:nth-child(2),.project-page-list:nth-child(3),.project-page-list:nth-child(4),.project-page-list:nth-child(5),.project-page-list.active
+  .project-page-list:nth-child(-n+5)
     display: grid
 .projects-more
   display: block

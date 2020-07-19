@@ -266,9 +266,10 @@ document.addEventListener("DOMContentLoaded", function() {
             ]
         });
     }
+
     //Project tabs
     if($('.project-gallery').length>0) {
-        tabElem('.project-tab-list-item','.project-gallery','project');
+        tabElem('.project-tab-list-item','.project-gallery:not(.multiply)','project');
     }
     //Spacialist slider
     if($('.specialists-slider').length>0) {
@@ -527,5 +528,39 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     //Browser check
     document.querySelectorAll("#buorg").length>0&&document.querySelector(".buorg-buttons a").addEventListener("click",function(){document.querySelector("#buorg").classList.add("visible-block")});
+    //Слайдер специалистов в услугах
+
+    if($('.partners-list .grid-container').length>0) {
+        $('.partners-list .grid-container').slick({
+            infinite: true,
+            autoplay: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            adaptiveHeight: true,
+            arrows: true,
+            prevArrow: '<span class="slider-btn slider-btn-left"></span>',
+            nextArrow: '<span class="slider-btn  slider-btn-right"></span>',
+            responsive: [
+                {
+                    breakpoint: 1480,
+                    arrows: true,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    }
+                },
+                {
+                    breakpoint: 995,
+                    arrows: false,
+                    adaptiveHeight: false,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+
+            ]
+        });
+    }
 });
 
