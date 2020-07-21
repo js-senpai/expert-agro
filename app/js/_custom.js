@@ -479,22 +479,22 @@ document.addEventListener("DOMContentLoaded", function() {
         let countProj = 5;
         const projectContainer = document.querySelectorAll('.project-page.project-gallery');
         for(let i = 0;i<projectContainer.length;i++){
-            if(projectContainer[i].querySelectorAll('.project-page-list').length>4){
+            if(projectContainer[i].querySelectorAll('.project-page-list').length>5){
                 projectContainer[i].querySelector('.projects-more').classList.remove('hidden');
             }
         }
         $('.projects-more').click(function(){
-              const parent = $(this).parent();
-              let parentCount = parent.find('.project-page-list').length;
-              if(countProj === parentCount){
-                  return true;
-              }else if(countProj < parentCount){
-                  countProj = parentCount;
-                  $(this).parent().find(`.project-page-list`).addClass('active');
-                  if(countProj === parentCount){
-                      $(this).addClass('done');
-                  }
-              }
+            const parent = $(this).parent();
+            let parentCount = parent.find('.project-page-list').length;
+            if(countProj === parentCount){
+                return true;
+            }else if(countProj < parentCount){
+                countProj = parentCount;
+                $(this).parent().find(`.project-page-list`).addClass('active');
+                if(countProj === parentCount){
+                    $(this).addClass('done');
+                }
+            }
         });
         $('.project-tab-list-item').click(function(){
             countProj = 5;
