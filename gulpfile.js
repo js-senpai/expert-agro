@@ -53,8 +53,11 @@ gulp.task('scripts', function() {
 		'node_modules/jquery-mask-plugin/dist/jquery.mask.min.js',
 		'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
 		'node_modules/readmore-js/readmore.min.js',
+		'app/js/blog-page-new/jquery.inputmask.min.js',
+		'app/js/blog-page-new/jquery.validate.min.js',
 		'app/js/_libs.js', // JS libraries (all in one)
 		'app/js/_custom.js', // Custom scripts. Always at the end
+		'app/js/blog-page-new/main.js'
 		]).pipe(babel())
 	.pipe(concat('scripts.min.js'))
 	.pipe(uglify()) // Minify js (opt.)
