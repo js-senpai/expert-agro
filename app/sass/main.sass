@@ -25,6 +25,8 @@ iframe
 *
   margin: 0
   padding: 0
+html
+  margin: 0  !important  
 ul
   list-style-type: none
 ul:not([class]) li,ol:not([class]) li
@@ -940,7 +942,6 @@ div.service-banner-img
   font-size: 16px
 .page-banner-item
   position: relative
-  height: max-content
   img
     position: absolute
     right: calc(100%/-9)
@@ -948,8 +949,6 @@ div.service-banner-img
     width: max-content
     max-width: 785px
     object-fit: cover
-  img
-    height: 100%
 .breadcrumbs
   justify-content: flex-start
   margin-bottom: 50px

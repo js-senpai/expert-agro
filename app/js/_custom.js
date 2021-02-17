@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         elements_selector: ".lazy"
     });
     lazyLoadInstance.update();
-    //Mobile slider
+    //Mobile slider  
     const mobileSlider = (elem) =>{
         if ($(window).width() <= 880) {
             $(elem).slick({
