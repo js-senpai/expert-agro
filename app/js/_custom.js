@@ -441,7 +441,9 @@ document.addEventListener("DOMContentLoaded", function() {
     //Contact form submit
     if($('.wpcf7').length>0){
         $('.wpcf7').on('wpcf7mailsent',function(){
-            $(this).fadeOut(500).siblings('.thank-you').fadeIn(500);
+            if($(this).siblings('.thank-you').length){
+                $(this).fadeOut(500).siblings('.thank-you').fadeIn(500);
+            }
         })
     }
     if($('.lead-popup-container .wpcf7')){
